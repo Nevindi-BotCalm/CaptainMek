@@ -1,0 +1,81 @@
+import React, { useState } from 'react';
+import image1 from '../assets/image1.webp';
+import MenuIcon from './icons/MenuIcon';
+import UserSettingsIcon from './icons/UserSettingsIcon';
+import LanguageSelector from './LanguageSelector';
+import MobileMenu from './MobileMenu';
+
+const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: 'About', href: '/about' },
+    { name: 'Ecosystem', href: '/ecosystem' },
+    { name: 'How To Buy', href: '/how-to-buy' },
+    { name: 'Battle Plan', href: '/battle-plan' },
+    { name: 'FAQ', href: '/faq' },
+  ];
+
+  return (
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 w-full max-w-[1920px] mx-auto min-h-[70px] md:h-[90px] flex items-center justify-between px-4 sm:px-6 lg:px-10 py-4 bg-[#0F172A]">
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <a href="/" className="block">
+            <img src={image1} alt="Captain Mek logo" className="h-10 sm:h-12 w-auto" />
+          </a>
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className=" hidden lg:flex items-center gap-6 xl:gap-8">
+          <ul className="flex items-center gap-6 xl:gap-8 text-white">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  className="navitems hover:text-blue-400 transition-colors font-medium text-sm xl:text-base"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Right Section - Desktop */}
+        <div className="hidden lg:flex items-center gap-4">
+          <LanguageSelector />
+          
+          <button className="flex items-center gap-2 bg-[#FEE5A9] hover:bg-[#1E3A8A] text-black font-bold py-2 px-6 rounded-lg transition-colors">
+            <UserSettingsIcon width={20} height={20} color="black" />
+            <span>Log In</span>
+          </button>
+        </div>
+
+
+        {/* Mobile Menu Buttons */}
+        <div className="flex lg:hidden items-center gap-2 sm:gap-4">
+          <button className="bg-[#F5DEB3] text-[#1E293B] font-bold py-2 px-3 sm:px-4 rounded-lg hover:bg-[#E5CE9F] transition-colors text-sm sm:text-base">
+            Log In
+          </button>
+          
+          <button
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="text-white p-1.5 sm:p-2 hover:bg-white/10 rounded-lg transition-colors"
+            aria-label="Open menu"
+          >
+            <MenuIcon width={24} height={24} color="white" className="sm:w-7 sm:h-7" />
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      <MobileMenu 
+        isOpen={isMobileMenuOpen} 
+        onClose={() => setIsMobileMenuOpen(false)} 
+      />
+    </>
+  );
+};
+
+export default Navbar;
