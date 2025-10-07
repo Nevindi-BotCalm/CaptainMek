@@ -1,0 +1,102 @@
+import React from "react";
+import image10 from "../assets/image10.webp";
+import image11 from "../assets/image11.webp";
+import image12 from "../assets/image12.webp";
+import image13 from "../assets/image13.webp";
+
+function EcoSystem() {
+  return (
+//     <div className="relative w-full min-h-[4000px]">
+//   <div className="relative -translate-y-[1400px]">
+//     {/* Text */}
+//     <div className="absolute flex items-center justify-center text-center opacity-100 top-[2919px] left-[305px] w-[618px] h-[77px]">
+//       <span className="font-halo font-normal text-[74px] leading-[77px]">
+//         ECOSYSTEM ARSENAL
+//       </span>
+//     </div>
+
+//     {/* Card 10 */}
+//     <img
+//       src={image10}
+//       alt="Card 10"
+//       className="absolute w-[374.5px] h-[552.3875px] top-[3209px] left-[773px] opacity-100"
+//     />
+
+//     {/* Card 11 */}
+//     <img
+//       src={image11}
+//       alt="Card 11"
+//       className="absolute w-[450px] h-[600.477px] top-[2919px] left-[1069.25px] opacity-100"
+//     />
+
+//     {/* Card 12 */}
+//     <img
+//       src={image12}
+//       alt="Card 12"
+//       className="absolute w-[374.5px] h-[552.3875px] top-[3283px] left-[1426px] opacity-100"
+//     />
+
+//     {/* Card 13 */}
+//     <img
+//       src={image13}
+//       alt="Card 13"
+//       className="absolute w-[723px] h-[773.045px] top-[3022px] left-[200px] opacity-100"
+//     />
+//   </div>
+// </div>
+
+<div className="relative w-full min-h-[4000px]">
+  {/* Text */}
+  <div className="absolute flex items-center justify-center text-center font-halo font-normal opacity-100
+      w-[618px] h-[77px] top-[2200px] left-[100px] 
+      md:w-[618px] md:h-[77px] md:top-[2500px] 
+      lg:w-[618px] lg:h-[77px] lg:top-[2919px] lg:left-[305px]">
+    ECOSYSTEM ARSENAL
+  </div>
+
+  {/* Card 13 */}
+  <img
+    src={image13}
+    alt="Card 13"
+    className="absolute
+      w-[500px] h-[550px] top-[2000px] left-[50px] 
+      md:w-[623px] md:h-[673px] md:top-[2800px] md:left-[200px]
+      lg:w-[723px] lg:h-[773px] lg:top-[3022px] lg:left-[200px]"
+  />
+
+  {/* Card 10 */}
+  <img
+    src={image10}
+    alt="Card 10"
+    className="absolute
+      w-[300px] h-[440px] top-[2100px] left-[250px] 
+      md:w-[374px] md:h-[552px] md:top-[3200px] md:left-[773px]
+      lg:w-[374px] lg:h-[552px] lg:top-[3209px] lg:left-[773px]"
+  />
+
+  {/* Card 11 */}
+  <img
+    src={image11}
+    alt="Card 11"
+    className="absolute
+      w-[360px] h-[480px] top-[2050px] left-[400px]
+      md:w-[450px] md:h-[600px] md:top-[2919px] md:left-[1069px]
+      lg:w-[450px] lg:h-[600px] lg:top-[2919px] lg:left-[1069px]"
+  />
+
+  {/* Card 12 */}
+  <img
+    src={image12}
+    alt="Card 12"
+    className="absolute
+      w-[300px] h-[440px] top-[2150px] left-[600px]
+      md:w-[374px] md:h-[552px] md:top-[3283px] md:left-[1426px]
+      lg:w-[374px] lg:h-[552px] lg:top-[3283px] lg:left-[1426px]"
+  />
+</div>
+
+
+  );
+}
+
+export default EcoSystem;
