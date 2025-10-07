@@ -1,3 +1,105 @@
+// import React from "react";
+// import Marquee from "react-fast-marquee";
+// import image2 from "../assets/image2.webp";
+// import image3 from "../assets/image3.webp";
+// import image4 from "../assets/image4.webp";
+// import image5 from "../assets/image5.webp";
+// import image6 from "../assets/image6.webp";
+// import image7 from "../assets/image7.webp";
+
+// function HeroSection() {
+//   const stripeStyle = {
+//     position: "absolute",
+//     width: "200%",
+//     height: "88px",
+//     top: "862.46px",
+//     left: "-50%",
+//     paddingTop: "30px",
+//     paddingBottom: "30px",
+//     gap: "40px",
+//     transform: "rotate(-0.9deg)",
+//     opacity: 1,
+//     display: "flex",
+//     justifyContent: "space-around",
+//     alignItems: "center",
+//     color: "white",
+//     fontFamily: "Exo",
+//     fontSize: "20px",
+//     fontWeight: 400,
+//     lineHeight: "28px",
+//     textTransform: "uppercase",
+//     backgroundColor: "rgba(0, 0, 0, 0.5)",
+//     textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+//     whiteSpace: "nowrap",
+//   };
+
+//   const stripeLgStyle = {
+//     ...stripeStyle,
+//     top: "80vh",
+//     fontSize: "2rem",
+//     height: "100px",
+//   };
+//   return (
+//     <div
+//       className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat bg-local overflow-x-hidden overflow-y-hidden lg:mt-10"
+//       style={{ backgroundImage: `url(${image2})` }}
+//     >
+//       <img
+//         src={image2}
+//         alt="Captain Mek background"
+//         className="absolute w-[1259px] h-[752px] top-[123px] left-[-466px] rotate-0 opacity-100"
+//       />
+
+//       <img
+//         src={image3}
+//         alt="Captain Mek hero"
+//         className="absolute w-[227px] h-[233px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[588px] lg:h-[604px] rotate-180 mix-blend-luminosity neonRainbow"
+//       />
+
+//       <img
+//         src={image4}
+//         alt="Captain Mek hero"
+//         className="absolute w-[515px] h-[281px] top-[457px] left-[-181px] rotate-0 opacity-100 lg:w-[700px] lg:h-[382px] lg:top-[40%] lg:left-[8%]"
+//       />
+
+//       <img
+//         src={image6}
+//         alt="Captain Mek hero"
+//         className="absolute w-[181px] h-[120px] top-[266px] left-[-57px] -rotate-[9deg] opacity-100 lg:w-[350px] lg:h-[232px] lg:top-[12%] lg:left-[12%] fly"
+//       />
+
+//       <img
+//         src={image5}
+//         alt="Captain Mek hero"
+//         className="absolute w-[240.20px] h-[315.40px] top-[514px] left-[188px] rotate-0 opacity-100 lg:w-[350px] lg:h-[418px] lg:top-[30%] lg:right-[5%] lg:left-auto walking"
+//       />
+
+//       <div
+//         className="absolute w-full"
+//         style={{
+//           top: "90%", // moved a bit down from 70%
+//           transform: "rotate(-0.9deg)",
+//         }}
+//       >
+//         <Marquee className="bg-black py-4 px-2 sm:py-4 sm:bg-black/50">
+//           {Array.from({ length: 100 }).map((_, index) => (
+//             <span
+//               key={index}
+//               className="flex items-center text-white text-base sm:text-xl font-['Exo'] font-normal uppercase mr-8"
+//             >
+//               <img src={image7} alt="" className="inline w-5 h-5 mr-2" />
+//               BECOME A MEME LEGEND BEFORE LIFTOFF!
+//             </span>
+//           ))}
+//         </Marquee>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default HeroSection;
+
+
 import React from "react";
 import Marquee from "react-fast-marquee";
 import image2 from "../assets/image2.webp";
@@ -8,80 +110,71 @@ import image6 from "../assets/image6.webp";
 import image7 from "../assets/image7.webp";
 
 function HeroSection() {
-  const stripeStyle = {
-    position: "absolute",
-    width: "200%",
-    height: "88px",
-    top: "862.46px",
-    left: "-50%",
-    paddingTop: "30px",
-    paddingBottom: "30px",
-    gap: "40px",
-    transform: "rotate(-0.9deg)",
-    opacity: 1,
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "center",
-    color: "white",
-    fontFamily: "Exo",
-    fontSize: "20px",
-    fontWeight: 400,
-    lineHeight: "28px",
-    textTransform: "uppercase",
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
-    whiteSpace: "nowrap",
-  };
-
-  const stripeLgStyle = {
-    ...stripeStyle,
-    top: "80vh",
-    fontSize: "2rem",
-    height: "100px",
-  };
   return (
     <div
-      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat bg-local overflow-x-hidden overflow-y-hidden lg:mt-10"
+      className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${image2})` }}
     >
+      {/* Background image */}
+      <img
+        src={image2}
+        alt="Captain Mek background"
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-90"
+      />
+
+      {/* Central hero image */}
       <img
         src={image3}
         alt="Captain Mek hero"
-        className="absolute w-[227px] h-[233px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[588px] lg:h-[604px] rotate-180 mix-blend-luminosity neonRainbow"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                   w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[350px] md:h-[350px] 
+                   lg:w-[588px] lg:h-[604px] rotate-180 mix-blend-luminosity neonRainbow"
       />
 
+      {/* Left bottom wave image */}
       <img
         src={image4}
-        alt="Captain Mek hero"
-        className="absolute w-[515px] h-[281px] top-[457px] left-[-181px] rotate-0 opacity-100 lg:w-[700px] lg:h-[382px] lg:top-[40%] lg:left-[8%]"
+        alt="Captain Mek wave"
+        className="absolute 
+                   w-[240px] h-[140px] top-[65%] left-[-60px]
+                   sm:w-[300px] sm:h-[180px] sm:left-[-80px]
+                   md:w-[400px] md:h-[220px] md:left-[-120px]
+                   lg:w-[700px] lg:h-[382px] lg:top-[40%] lg:left-[8%]"
       />
 
+      {/* Top left flying element */}
       <img
         src={image6}
-        alt="Captain Mek hero"
-        className="absolute w-[181px] h-[120px] top-[266px] left-[-57px] -rotate-[9deg] opacity-100 lg:w-[350px] lg:h-[232px] lg:top-[12%] lg:left-[12%] fly"
+        alt="Captain Mek fly"
+        className="absolute 
+                   w-[100px] h-[70px] top-[15%] left-[-20px] -rotate-[8deg]
+                   sm:w-[150px] sm:h-[100px] sm:left-[0]
+                   md:w-[220px] md:h-[150px] md:left-[5%]
+                   lg:w-[350px] lg:h-[232px] lg:top-[12%] lg:left-[12%] fly"
       />
 
+      {/* Right-side walking element */}
       <img
         src={image5}
-        alt="Captain Mek hero"
-        className="absolute w-[240px] h-[315px] top-[414px] left-[188px] rotate-0 opacity-100 lg:w-[350px] lg:h-[418px] lg:top-[30%] lg:right-[5%] lg:left-auto walking"
+        alt="Captain Mek walking"
+        className="absolute 
+                   w-[140px] h-[180px] top-[65%] left-[55%]
+                   sm:w-[180px] sm:h-[230px]
+                   md:w-[250px] md:h-[300px] md:left-[70%]
+                   lg:w-[350px] lg:h-[418px] lg:top-[30%] lg:right-[5%] lg:left-auto walking"
       />
 
+      {/* Moving Marquee text */}
       <div
-        className="absolute w-full"
-        style={{
-          top: "90%", // moved a bit down from 70%
-          transform: "rotate(-0.9deg)",
-        }}
+        className="absolute w-full rotate-[-1deg] bottom-0"
       >
-        <Marquee className="bg-black py-4 px-2 sm:py-4 sm:bg-black/50">
-          {Array.from({ length: 100 }).map((_, index) => (
+        <Marquee className="bg-black/60 py-3 sm:py-4">
+          {Array.from({ length: 30 }).map((_, index) => (
             <span
               key={index}
-              className="flex items-center text-white text-base sm:text-xl font-['Exo'] font-normal uppercase mr-8"
+              className="flex items-center text-white text-[12px] sm:text-[14px] md:text-[16px] lg:text-xl font-['Exo'] font-normal uppercase mr-6 sm:mr-8"
             >
-              <img src={image7} alt="" className="inline w-5 h-5 mr-2" />
+              <img src={image7} alt="" className="inline w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               BECOME A MEME LEGEND BEFORE LIFTOFF!
             </span>
           ))}
