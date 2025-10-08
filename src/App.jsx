@@ -5,6 +5,9 @@ import HeroSection from './components/HeroSection';
 import Customers from './components/Customers';
 import AboutSection from './components/AboutSection'; 
 import EcoSystem from './components/EcoSystem';
+import HowToBuy from './components/HowToBuySection';
+import Footer from './components/Footer';
+import FAQ from './components/FAQSection'
 
 function App() {
   return (
@@ -14,6 +17,10 @@ function App() {
       <Customers />
       <AboutSection />
       <EcoSystem />
+      <HowToBuy />
+       <FAQ />
+      {/* <Footer /> */}
+     
     </div>
   )
 }
