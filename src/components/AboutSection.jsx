@@ -7,7 +7,7 @@ import AboutSectionResponsive2 from "../assets/AboutSectionResponsive2.webp";
 function AboutSection() {
   return (
     <div className="relative w-full h-auto">
-      {/* Desktop Images */}
+     
       <img
         src={image8}
         alt="Full Image"
@@ -19,16 +19,16 @@ function AboutSection() {
         alt="Captain Mek Character"
         className="hidden md:block absolute left-[210px] top-[278px] w-[507px] h-[707px] object-contain opacity-100 rotate-0"
       />
-      {/* Responsive Images */}
+     
       <div className="block md:hidden relative">
-        {/* Image 2 – goes behind & slightly lower */}
+       
         <img
           src={AboutSectionResponsive2}
           alt="About Section Mobile 2"
           className="w-full h-auto object-cover absolute top-[450px] left-0 z-0"
         />
 
-        {/* Image 1 – stays in front */}
+       
         <img
           src={AboutSectionResponsive1}
           alt="About Section Mobile 1"
@@ -36,7 +36,7 @@ function AboutSection() {
         />
       </div>
 
-      {/* Text Section */}
+     
       <div className="about-section-para absolute left-[800px] top-[325px] w-[560px] h-[510px] p-3 font-inter font-medium text-black text-[25px] leading-[1.4] rotate-[-7.5deg] opacity-100 hidden md:block">
         <p>
           Captain Mek the First Avenger of meme coins wields $CMEK as a powerful

@@ -13,14 +13,14 @@ function HeroSection() {
       className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${image2})` }}
     >
-      {/* Background image */}
+     
       <img
         src={image2}
         alt="Captain Mek background"
         className="absolute top-0 left-0 w-full h-full object-cover opacity-90"
       />
 
-      {/* Central hero image */}
+     
       <img
         src={image3}
         alt="Captain Mek hero"
@@ -29,7 +29,7 @@ function HeroSection() {
                    lg:w-[588px] lg:h-[604px] rotate-180 mix-blend-luminosity neonRainbow"
       />
 
-      {/* Left bottom wave image */}
+    
       <img
         src={image4}
         alt="Captain Mek wave"
@@ -40,7 +40,7 @@ function HeroSection() {
                    lg:w-[700px] lg:h-[382px] lg:top-[40%] lg:left-[8%]"
       />
 
-      {/* Top left flying element */}
+     
       <img
         src={image6}
         alt="Captain Mek fly"
@@ -51,7 +51,7 @@ function HeroSection() {
                    lg:w-[350px] lg:h-[232px] lg:top-[12%] lg:left-[12%] fly"
       />
 
-      {/* Right-side walking element */}
+   
       <img
         src={image5}
         alt="Captain Mek walking"
@@ -62,7 +62,7 @@ function HeroSection() {
                    lg:w-[350px] lg:h-[418px] lg:top-[30%] lg:right-[5%] lg:left-auto walking"
       />
 
-      {/* Moving Marquee text */}
+  
       <div
         className="absolute w-full rotate-[-1deg] bottom-0"
       >

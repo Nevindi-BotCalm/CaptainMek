@@ -42,7 +42,7 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        {/* Right Section - Desktop */}
+      
         <div className="hidden lg:flex items-center gap-4">
           <LanguageSelector />
           

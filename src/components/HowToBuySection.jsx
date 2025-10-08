@@ -14,7 +14,7 @@ function HowToBuySection() {
         </h2>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 xl:gap-12 2xl:gap-16">
-          {/* Left side with four images */}
+       
           <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-6 2xl:gap-8">
             <img
               src={imageh}
