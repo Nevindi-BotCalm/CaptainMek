@@ -2,7 +2,7 @@ import image1 from "../assets/image1.webp";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0F172A] border-t border-blue-400 py-8">
+    <footer className="bg-[#0F172A] py-8">
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-center gap-8">
         {/* Logo */}
         <div className="flex items-center">

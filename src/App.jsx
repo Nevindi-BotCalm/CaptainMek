@@ -1,13 +1,14 @@
-import './index.css';
-import './App.css';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import Customers from './components/Customers';
-import AboutSection from './components/AboutSection'; 
-import EcoSystem from './components/EcoSystem';
-import HowToBuy from './components/HowToBuySection';
-import Footer from './components/Footer';
-import FAQ from './components/FAQSection'
+import "./index.css";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import Customers from "./components/Customers";
+import AboutSection from "./components/AboutSection";
+import EcoSystem from "./components/EcoSystem";
+import HowToBuy from "./components/HowToBuySection";
+import Footer from "./components/Footer";
+import FAQ from "./components/FAQSection";
+import BattlePlan from "./components/BattlePlan";
 
 function App() {
   return (
@@ -18,11 +19,11 @@ function App() {
       <AboutSection />
       <EcoSystem />
       <HowToBuy />
-       <FAQ />
-      {/* <Footer /> */}
-     
+      <BattlePlan />
+      <FAQ />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

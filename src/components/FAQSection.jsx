@@ -1,104 +1,3 @@
-// import React, { useState } from "react";
-// import FAQ1 from "../assets/FAQ1.webp";
-// import FAQ2 from "../assets/FAQ2.webp";
-
-// function FAQSection() {
-//   const [openCard, setOpenCard] = useState(null);
-
-//   const toggleCard = (index) => {
-//     setOpenCard(openCard === index ? null : index);
-//   };
-
-//   const questions = [
-//     {
-//       question: "1. What is Captain Mek?",
-//       answer:
-//         "Captain Mek is a meme-based entertainment and digital community project that blends humor, creativity, and web culture. It’s designed to spread good vibes through memes, content creation, and community-driven fun — while also exploring the world of digital engagement and future token utilities.",
-//     },
-//     {
-//       question: "2. What can I do with $CMEK?",
-//       answer:
-//         "$CMEK is the symbolic energy of the Captain Mek universe. It can be used to unlock community perks, participate in exclusive content drops, access NFT rewards, and vote in creative community decisions. Think of it as your digital ticket to the Mek multiverse!",
-//     },
-//     {
-//       question: "3. What are the benefits of holding $CMEK long-term?",
-//       answer:
-//         "Holding $CMEK means you’re part of the early crew. Long-term holders may get access to exclusive events, limited-edition meme NFTs, partnership giveaways, and priority in future ecosystem expansions — plus, you help shape the Captain Mek community as it grows.",
-//     },
-//     {
-//       question: "4. What makes Captain Mek different?",
-//       answer:
-//         "Captain Mek isn’t just another meme project — it’s a creative movement. While others chase trends, we build a universe around humor, art, and storytelling. Every meme, character, and interaction connects to the larger Captain Mek experience — made by the people, for the people.",
-//     },
-//   ];
-
-//   return (
-//     <div
-//       className="relative lg:w-[1920px] w-full lg:h-[1150px] min-h-screen bg-cover bg-center bg-no-repeat py-12 px-4 sm:py-16 md:py-20 lg:py-24"
-//       style={{ backgroundImage: `url(${FAQ1})` }}
-//     >
-//       <div
-//         className="absolute w-[1084px] h-[1084px] top-[34px] left-[807px]
-//   bg-cover bg-center opacity-100
-//   max-md:w-[852px] max-md:h-[852px] max-md:top-[80px] max-md:left-1/2 max-md:-translate-x-1/2"
-//         style={{ backgroundImage: `url(${FAQ2})` }}
-//       />
-
-//       {/* Content container */}
-//       <div className="relative z-10 max-w-7xl mx-auto">
-//         {/* FAQ Title */}
-//         <h2
-//           className="font-[Halo_Dek] font-normal text-[36px] lg:text-[74px]
-//           leading-[100%] mb-8 sm:mb-12 md:mb-16 lg:mb-20
-//           text-center lg:text-left px-2 sm:px-4"
-//         >
-//           FAQ
-//         </h2>
-
-//         {/* FAQ Cards */}
-//         <div className="space-y-3 sm:space-y-4 px-2 sm:px-4 max-w-full lg:max-w-[794px]">
-//           {questions.map((item, index) => (
-//             <div
-//               key={index}
-//               className="w-full border border-gray-300 rounded-2xl sm:rounded-3xl lg:rounded-[32px] cursor-pointer transition-all duration-300 hover:shadow-lg"
-//               style={{
-//                 backgroundColor: "#FEE5A9",
-//                 minHeight: "60px",
-//                 padding: "16px 20px",
-//               }}
-//               onClick={() => toggleCard(index)}
-//             >
-//               <div className="flex justify-between items-center gap-4">
-//                 <span
-//                   className="font-medium text-sm sm:text-base md:text-lg bg-clip-text flex-1"
-//                   style={{
-//                     background:
-//                       "linear-gradient(180deg, #330051 0%, #506EFF 100%)",
-//                     WebkitBackgroundClip: "text",
-//                     WebkitTextFillColor: "transparent",
-//                   }}
-//                 >
-//                   {item.question}
-//                 </span>
-//                 <span className="text-lg sm:text-xl md:text-2xl font-bold flex-shrink-0">
-//                   {openCard === index ? "−" : "+"}
-//                 </span>
-//               </div>
-//               {openCard === index && (
-//                 <div className="mt-3 sm:mt-4 text-gray-700 text-sm sm:text-base transition-all duration-300">
-//                   {item.answer}
-//                 </div>
-//               )}
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default FAQSection;
-
 import React, { useState } from "react";
 import FAQ1 from "../assets/FAQ1.webp";
 import FAQ2 from "../assets/FAQ2.webp";
@@ -135,7 +34,9 @@ function FAQSection() {
 
   return (
     <div
-      className="relative w-full bg-cover bg-center bg-no-repeat py-12 px-4 sm:py-16 md:py-20 lg:py-24 lg:h-[1150px] lg:w-[1920px]"
+      className="max-w-[1920px] mx-auto relative w-full bg-cover bg-center bg-no-repeat py-12 px-4 sm:py-16 md:py-20 lg:py-20 lg:h-[1150px] lg:w-[1905px] lg:left-1/2 lg:-translate-x-1/2"
+
+
       style={{ backgroundImage: `url(${FAQ1})` }}
     >
       {/* Desktop background image (FAQ2) */}
@@ -157,7 +58,7 @@ function FAQSection() {
         </h2>
 
         {/* FAQ Cards */}
-        <div className="w-full lg:max-w-[794px] space-y-3 sm:space-y-4 lg:space-y-6 mx-auto lg:mx-0">
+        <div className="w-full lg:max-w-[794px] space-y-3 sm:space-y-4 lg:space-y-6 mx-auto lg:mx-[-0px]">
           {questions.map((item, index) => (
             <div
               key={index}

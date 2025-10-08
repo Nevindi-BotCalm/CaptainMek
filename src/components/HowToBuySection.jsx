@@ -4,6 +4,7 @@ import imagei from "../assets/i.webp";
 import imagej from "../assets/j.webp";
 import imagek from "../assets/k.webp";
 import crypto from "../assets/crypto.webp";
+import gradient from "../assets/gradient.webp";
 
 function HowToBuySection() {
   return (
@@ -14,7 +15,6 @@ function HowToBuySection() {
         </h2>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 xl:gap-12 2xl:gap-16">
-       
           <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 xl:gap-6 2xl:gap-8">
             <img
               src={imageh}
@@ -47,11 +47,17 @@ function HowToBuySection() {
             />
           </div> */}
 
-          <div className="w-full lg:w-1/2 flex items-center justify-center mt-8 lg:mt-0 robot-container">
+          <div className="w-full lg:w-1/2 flex items-center justify-center mt-8 lg:mt-0 robot-container relative">
+            <img
+              src={gradient}
+              alt="Gradient Background"
+              className="absolute inset-0 w-full h-full object-contain z-0 rounded-full animate-swirlPulse"
+            />
+
             <img
               src={crypto}
               alt="Crypto"
-              className="w-[705px] max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl h-auto object-contain -rotate-[5deg] animate-fly"
+              className="relative z-10 w-[705px] max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl h-auto object-contain -rotate-[5deg] animate-fly"
             />
           </div>
         </div>
