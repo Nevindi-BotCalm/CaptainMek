@@ -8,7 +8,7 @@ import gradient from "../assets/gradient.webp";
 
 function HowToBuySection() {
   return (
-    <div className="max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
+    <div className="max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto overflow-x-hidden px-4">
       <h2 className="text-4xl md:text-6xl xl:text-7xl font-halo font-bold text-white text-center mb-12 md:mb-16 xl:mb-20">
         HOW TO BUY
       </h2>
@@ -57,7 +57,7 @@ function HowToBuySection() {
           <img
             src={crypto}
             alt="Crypto"
-            className="relative z-10 w-[705px] max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl h-auto object-contain -rotate-[5deg] lg:animate-fly"
+            className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl h-auto object-contain -rotate-[5deg] lg:animate-fly"
           />
         </div>
       </div>

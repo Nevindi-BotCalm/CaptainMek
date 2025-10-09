@@ -147,7 +147,7 @@ function BattlePlan() {
 
           {/* Left Phase Card */}
           <div
-            className="absolute w-[453px] h-[72px] top-[464px] left-[315px] bg-[#FEE5A9] 
+            className="absolute w-[453px] h-[72px] top-[400px] left-[315px] bg-[#FEE5A9] 
                        border border-gray-300 rounded-[32px] flex items-center justify-center 
                        font-medium px-7 py-5"
             style={{
@@ -159,6 +159,7 @@ function BattlePlan() {
               {phases[currentPhase].text}
             </span>
           </div>
+
 
           {/* Right Phase Card */}
           <div
