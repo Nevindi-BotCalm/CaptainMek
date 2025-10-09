@@ -34,7 +34,7 @@ function FAQSection() {
 
   return (
     <div
-      className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-x-hidden py-12 px-4 sm:py-16 md:py-20 lg:py-20 lg:h-[1150px] mt-90"
+      className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-x-hidden py-12 px-4 sm:py-16 md:py-20 lg:py-20 lg:h-[1150px] mt-20"
 
 
       style={{ backgroundImage: `url(${FAQ1})` }}
