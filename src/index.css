@@ -169,6 +169,15 @@
   animation: swirlPulse 8s ease-in-out infinite;
 }
 
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
 
 
 
@@ -183,8 +192,13 @@ body {
     color: #fff;
     margin: 0;
 
+
     /* The minimum width for your design. Content will not shrink below this. */
     min-width: 380px;
+}
+
+@theme{
+  --breakpoint-3xl: 1920px;
 }
 
 .font-halo {

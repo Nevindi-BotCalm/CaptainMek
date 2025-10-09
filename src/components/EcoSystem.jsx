@@ -6,9 +6,7 @@ import image13 from "../assets/image13.webp";
 
 function EcoSystem() {
   return (
-    <div className="relative w-full overflow-hidden mt-150 lg:mt-[-1300px]">
-
-    
+    <div className="relative w-full overflow-hidden mt-150 lg:mt-[-2599px]">
       <div className="hidden lg:block relative min-h-[4000px] -translate-y-[140px]">
         <div className="relative w-full max-w-[1920px] mx-auto">
           <div className="absolute flex items-center opacity-100 top-[2919px] left-[305px] w-[618px] h-[77px]">
@@ -17,13 +15,13 @@ function EcoSystem() {
             </span>
           </div>
 
-         
           <div className="absolute top-[2919px] left-[50%] -translate-x-[50%] w-[1600px] max-w-[95vw]">
             <img
               src={image13}
               alt="Card 13"
-              className="absolute w-[723px] h-[773px] top-[103px] left-0 opacity-100 max-w-[40vw]"
+              className="absolute w-[723px] h-[773px] top-[103px] left-0 opacity-100 max-w-[40vw] animate-[jump_0.8s_ease-in-out_infinite]"
             />
+
             <img
               src={image10}
               alt="Card 10"
@@ -43,7 +41,6 @@ function EcoSystem() {
         </div>
       </div>
 
-     
       <div className="block lg:hidden w-full px-4 py-8 sm:py-12 md:py-16">
         {/* Title */}
         <h2 className="font-halo text-[28px] xs:text-[32px] sm:text-[40px] md:text-[48px] font-normal leading-tight text-center mb-8 sm:mb-10 md:mb-12">

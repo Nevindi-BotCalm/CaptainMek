@@ -14,10 +14,10 @@ function App() {
   return (
     <div className="App bg-[#0F172A] min-h-screen text-white">
       <Navbar />
-       <section id="home">
+      <section id="home">
         <HeroSection />
       </section>
-      <Customers />
+     <Customers />
       <section id="about">
         <AboutSection />
       </section>
@@ -26,14 +26,14 @@ function App() {
       </section>
       <section id="how-to-buy">
         <HowToBuy />
-      </section> 
+      </section>
       <section id="battle-plan">
         <BattlePlan />
       </section>
       <section id="faq">
-        <FAQ /> 
+        <FAQ />
       </section>
-      <Footer /> 
+      <Footer />
     </div>
   );
 }
