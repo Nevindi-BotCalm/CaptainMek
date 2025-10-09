@@ -14,13 +14,25 @@ function App() {
   return (
     <div className="App bg-[#0F172A] min-h-screen text-white">
       <Navbar />
-      <HeroSection />
+      <section id="home">
+        <HeroSection />
+      </section>
       <Customers />
-      <AboutSection />
-      <EcoSystem />
-      <HowToBuy />
-      <BattlePlan />
-      <FAQ />
+      <section id="about">
+        <AboutSection />
+      </section>
+      <section id="ecosystem">
+        <EcoSystem />
+      </section>
+      <section id="how-to-buy">
+        <HowToBuy />
+      </section>
+      <section id="battle-plan">
+        <BattlePlan />
+      </section>
+      <section id="faq">
+        <FAQ />
+      </section>
       <Footer />
     </div>
   );

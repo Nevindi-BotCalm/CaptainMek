@@ -4,12 +4,24 @@ const MobileMenu = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const navLinks = [
-    { name: 'About', href: '/about' },
-    { name: 'Ecosystem', href: '/ecosystem' },
-    { name: 'How To Buy', href: '/how-to-buy' },
-    { name: 'Battle Plan', href: '/battle-plan' },
-    { name: 'FAQ', href: '/faq' },
+    { name: 'About', href: '#about' },
+    { name: 'Ecosystem', href: '#ecosystem' },
+    { name: 'How To Buy', href: '#how-to-buy' },
+    { name: 'Battle Plan', href: '#battle-plan' },
+    { name: 'FAQ', href: '#faq' },
   ];
+
+  const handleSmoothScroll = (e, href) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      let offset = 90;
+      if (href === '#battle-plan') offset = 200;
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+    }
+    onClose();
+  };
 
   return (
     <div className="h-screen w-full fixed inset-0 bg-[#0F172A] z-40 lg:hidden animate-fadeIn">
@@ -29,8 +41,8 @@ const MobileMenu = ({ isOpen, onClose }) => {
             <a
               key={link.name}
               href={link.href}
-              className="text-white text-xl sm:text-2xl font-medium hover:text-blue-400 transition-colors"
-              onClick={onClose}
+              onClick={(e) => handleSmoothScroll(e, link.href)}
+              className="text-white text-xl sm:text-2xl font-medium hover:text-blue-400 transition-colors cursor-pointer"
             >
               {link.name}
             </a>

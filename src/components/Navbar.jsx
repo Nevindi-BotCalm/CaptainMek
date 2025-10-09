@@ -9,19 +9,30 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'About', href: '/about' },
-    { name: 'Ecosystem', href: '/ecosystem' },
-    { name: 'How To Buy', href: '/how-to-buy' },
-    { name: 'Battle Plan', href: '/battle-plan' },
-    { name: 'FAQ', href: '/faq' },
+    { name: 'About', href: '#about' },
+    { name: 'Ecosystem', href: '#ecosystem' },
+    { name: 'How To Buy', href: '#how-to-buy' },
+    { name: 'Battle Plan', href: '#battle-plan' },
+    { name: 'FAQ', href: '#faq' },
   ];
+
+  const handleSmoothScroll = (e, href) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      let offset = 90;
+      if (href === '#battle-plan') offset = 200;
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full max-w-[1920px] mx-auto min-h-[70px] md:h-[90px] flex items-center justify-between px-4 sm:px-6 lg:px-10 py-4 bg-[#0F172A]">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <a href="/" className="block">
+          <a href="#home" onClick={(e) => handleSmoothScroll(e, '#home')} className="block cursor-pointer">
             <img src={image1} alt="Captain Mek logo" className="h-10 sm:h-12 w-auto" />
           </a>
         </div>
@@ -33,7 +44,8 @@ const Navbar = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="navitems hover:text-blue-400 transition-colors font-medium text-sm xl:text-base"
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                  className="navitems hover:text-blue-400 transition-colors font-medium text-sm xl:text-base cursor-pointer"
                 >
                   {link.name}
                 </a>

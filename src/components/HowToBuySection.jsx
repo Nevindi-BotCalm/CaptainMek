@@ -6,9 +6,10 @@ import imagek from "../assets/k.webp";
 import crypto from "../assets/crypto.webp";
 import gradient from "../assets/gradient.webp";
 
+
 function HowToBuySection() {
   return (
-    <div className="w-full min-h-screen py-16 px-4 mt-[-100px] md:mt-[-200px]">
+    
       <div className="max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
         <h2 className="text-4xl md:text-6xl xl:text-7xl font-halo font-bold text-white text-center mb-12 md:mb-16 xl:mb-20">
           HOW TO BUY
@@ -62,7 +63,7 @@ function HowToBuySection() {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 
