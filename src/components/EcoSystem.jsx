@@ -74,7 +74,7 @@ import image13 from "../assets/image13.webp";
 
 function EcoSystem() {
   return (
-    <div className="relative w-full overflow-hidden mt-[15px] lg:mt-[-2599px]">
+    <div className="relative w-full overflow-hidden mt-[15px] lg:mt-[-2300px]">
       {/* Desktop / Laptop */}
       <div className="hidden lg:block relative min-h-[4000px] -translate-y-[140px]">
         <div className="relative w-full max-w-[1920px] mx-auto">

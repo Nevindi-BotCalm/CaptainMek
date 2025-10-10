@@ -1,4 +1,5 @@
 import "./index.css";
+import CursorTrail from "./components/CursorTrail";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -13,11 +14,12 @@ import BattlePlan from "./components/BattlePlan";
 function App() {
   return (
     <div className="App bg-[#0F172A] min-h-screen text-white">
+    <CursorTrail />
       <Navbar />
       <section id="home">
         <HeroSection />
       </section>
-     <Customers />
+      <Customers />
       <section id="about">
         <AboutSection />
       </section>

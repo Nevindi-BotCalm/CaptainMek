@@ -6,12 +6,12 @@ import AboutSectionResponsive2 from "../assets/AboutSectionResponsive2.webp";
 
 function AboutSection() {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full">
       {/* Background Image (Desktop) */}
       <img
         src={image8}
         alt="Background"
-        className="hidden sm:hidden md:block w-full max-w-[1920px] mx-auto h-[1200px] lg:h-[1440px] object-cover"
+        className="hidden sm:hidden md:block w-full max-w-[1920px] mx-auto lg:h-[1440px] object-cover"
       />
 
       {/* Main Content (Desktop & Laptop) */}
@@ -29,7 +29,7 @@ function AboutSection() {
         {/* About Text Section */}
         <div className="flex-1 relative">
           <div
-            className="font-halo text-black font-normal bg-[url('../assets/bgTexture.webp')] bg-[#D9D9D9] bg-cover bg-center bg-no-repeat 
+            className="font-halo text-black font-normal  bg-[#D9D9D9] bg-cover bg-center bg-no-repeat 
              inline-block px-2 py-1 text-[48px] lg:text-[64px] mb-6 rotate-[-5deg] -ml-6 lg:-ml-100"
           >
             ABOUT
