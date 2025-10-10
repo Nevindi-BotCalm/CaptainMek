@@ -11,11 +11,11 @@ function AboutSection() {
       <img
         src={image8}
         alt="Background"
-        className="hidden md:block w-full max-w-[1920px] mx-auto h-[1200px] lg:h-[1440px] object-cover"
+        className="hidden sm:hidden md:block w-full max-w-[1920px] mx-auto h-[1200px] lg:h-[1440px] object-cover"
       />
 
       {/* Main Content (Desktop & Laptop) */}
-      <div className="hidden md:flex relative justify-between items-start max-w-[1600px] mx-auto px-8 xl:px-20 -mt-[900px] xl:-mt-[1100px]">
+      <div className="hidden sm:hidden md:flex relative justify-between items-start max-w-[1600px] mx-auto px-8 xl:px-20 -mt-[900px] xl:-mt-[1100px]">
         {/* Captain Mek Image */}
 
         <div className="flex-1 flex justify-center">
@@ -61,6 +61,21 @@ function AboutSection() {
         </div>
       </div>
 
+      {/* Mobile Layout
+      <div className="block md:hidden">
+        <img
+          src={AboutSectionResponsive1}
+          alt="About Section Mobile 1"
+          className="w-full h-auto object-cover"
+        />
+        <img
+          src={AboutSectionResponsive2}
+          alt="About Section Mobile 2"
+          className="w-full h-auto object-cover mt-[-120px]"
+        />
+      </div> */}
+
+      {/* Mobile Layout */}
       {/* Mobile Layout */}
       <div className="block md:hidden relative">
         <img
@@ -71,24 +86,8 @@ function AboutSection() {
         <img
           src={AboutSectionResponsive2}
           alt="About Section Mobile 2"
-          className="w-full h-auto object-cover absolute top-[450px] left-0 z-0"
+          className="w-full h-auto object-cover mt-[-170px] z-0"
         />
-
-        <div className="relative z-20 px-4 py-6">
-          <h2
-            className="font-halo text-[40px] text-black bg-[url('../assets/bgTexture.webp')] bg-[#D9D9D9] bg-cover bg-center 
-                       inline-block px-2 py-1 rotate-[-3deg]"
-          >
-            ABOUT
-          </h2>
-
-          <p className="mt-4 font-inter font-medium text-black text-[16px] leading-[1.5] rotate-[-2deg]">
-            Captain Mek, the First Avenger of meme coins, wields $CMEK as a
-            powerful shield, leading the crypto community to turn chaos into
-            profit. The project empowers everyday investors through innovation
-            and strategy.
-          </p>
-        </div>
       </div>
     </div>
   );
