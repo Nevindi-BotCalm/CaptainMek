@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import FAQ1 from "../assets/FAQ1.webp";
 import FAQ2 from "../assets/FAQ2.webp";
 
@@ -33,10 +33,8 @@ function FAQSection() {
   ];
 
   return (
-    <div
-      className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-x-hidden py-12 px-4 sm:py-16 md:py-20 lg:py-20 lg:h-[1150px] mt-20"
-
-
+    <section
+      className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-x-hidden py-12 px-4 sm:py-16 md:py-20 lg:py-24 lg:min-h-[1150px] mt-20"
       style={{ backgroundImage: `url(${FAQ1})` }}
     >
       {/* Desktop background image (FAQ2) */}
@@ -50,20 +48,20 @@ function FAQSection() {
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center lg:items-start">
         {/* FAQ Title */}
         <h2
-          className="font-[Halo_Dek] font-normal text-[36px] lg:text-[74px]
-          leading-[100%] mb-8 sm:mb-12 md:mb-16 lg:mb-20
-          text-center lg:text-left text-[#ffffff] w-full"
+          className="font-halo font-normal text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] xl:text-[74px]
+          leading-tight mb-8 sm:mb-12 md:mb-16 lg:mb-20
+          text-center lg:text-left text-white w-full"
         >
           FAQ
         </h2>
 
         {/* FAQ Cards */}
-        <div className="w-full lg:max-w-[794px] space-y-3 sm:space-y-4 lg:space-y-6 mx-auto lg:mx-[-0px]">
+        <div className="w-full lg:max-w-[794px] space-y-4 sm:space-y-5 lg:space-y-6 mx-auto lg:mx-0">
           {questions.map((item, index) => (
             <div
               key={index}
-              className="w-full border border-gray-300 rounded-2xl sm:rounded-3xl lg:rounded-[32px] 
-              cursor-pointer transition-all duration-300 hover:shadow-lg bg-[#FEE5A9] p-4 sm:p-5"
+              className="w-full border-2 border-gray-200 rounded-2xl sm:rounded-3xl lg:rounded-[32px] 
+              cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-[#FEE5A9] p-5 sm:p-6"
               onClick={() => toggleCard(index)}
             >
               <div className="flex justify-between items-center gap-4">
@@ -83,7 +81,7 @@ function FAQSection() {
                 </span>
               </div>
               {openCard === index && (
-                <div className="mt-3 sm:mt-4 text-gray-700 text-sm sm:text-base transition-all duration-300">
+                <div className="mt-4 sm:mt-5 text-gray-800 text-sm sm:text-base leading-relaxed transition-all duration-300 animate-fadeIn">
                   {item.answer}
                 </div>
               )}
@@ -108,7 +106,7 @@ function FAQSection() {
           />
         </div>
       </div>
-    </div>
+                  </section>
   );
 }
 

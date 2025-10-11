@@ -1,4 +1,3 @@
-import React from 'react';
 
 const MobileMenu = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -24,7 +23,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="h-screen w-full fixed inset-0 bg-[#0F172A] z-40 lg:hidden animate-fadeIn">
+    <div className="h-screen w-full fixed inset-0 bg-[#0F172A]/95 backdrop-blur-sm z-40 lg:hidden animate-fadeIn">
       <div className="flex flex-col h-full">
         <div className="flex justify-end p-4 sm:p-6">
           <button
@@ -48,7 +47,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
             </a>
           ))}
           
-          <button className="bg-[#FEE5A9] hover:bg-[#ffffff] text-black not-first:font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg mt-4 transition-colors text-base sm:text-lg">
+          <button className="bg-[#FEE5A9] hover:bg-[#E5CE9F] text-black font-bold py-3 px-8 rounded-lg mt-6 transition-all duration-300 hover:scale-105 text-base sm:text-lg">
             Log In
           </button>
         </nav>

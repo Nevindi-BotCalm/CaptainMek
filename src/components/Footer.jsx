@@ -1,77 +1,89 @@
 import image1 from "../assets/image1.webp";
 
 const Footer = () => {
+  const handleSmoothScroll = (e, href) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = href === '#battle-plan' ? 200 : 90;
+      const elementPosition = element.offsetTop - offset;
+      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="bg-[#0F172A] py-8">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-between items-center gap-8">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img src={image1} alt="Captain Mek Logo" className="h-12 w-auto" />
+    <footer className="bg-[#0F172A] py-12 md:py-16 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-12">
+          {/* Logo */}
+          <div className="flex items-center">
+            <img src={image1} alt="Captain Mek Logo" className="h-14 md:h-16 w-auto" />
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="flex flex-col sm:flex-row lg:flex-col gap-4 sm:gap-6 lg:gap-3 text-center">
+            <a
+              href="#about"
+              onClick={(e) => handleSmoothScroll(e, '#about')}
+              className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
+            >
+              About
+            </a>
+            <a
+              href="#ecosystem"
+              onClick={(e) => handleSmoothScroll(e, '#ecosystem')}
+              className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
+            >
+              Ecosystem
+            </a>
+            <a
+              href="#how-to-buy"
+              onClick={(e) => handleSmoothScroll(e, '#how-to-buy')}
+              className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
+            >
+              How To Buy
+            </a>
+            <a
+              href="#battle-plan"
+              onClick={(e) => handleSmoothScroll(e, '#battle-plan')}
+              className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
+            >
+              Battle Plan
+            </a>
+            <a
+              href="#faq"
+              onClick={(e) => handleSmoothScroll(e, '#faq')}
+              className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
+            >
+              FAQ
+            </a>
+          </nav>
+
+          {/* Social Icons */}
+          <div className="flex gap-4">
+            <a
+              href="#"
+              className="bg-[#FEE5A9] p-3 rounded-lg hover:bg-[#E5CE9F] transition-all duration-300 hover:scale-110"
+              aria-label="Email"
+            >
+              <span className="text-black text-xl font-bold">📧</span>
+            </a>
+            <a
+              href="#"
+              className="bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-all duration-300 hover:scale-110"
+              aria-label="Twitter"
+            >
+              <span className="text-white text-xl font-bold">✕</span>
+            </a>
+          </div>
         </div>
 
-        {/* Navigation Links */}
-        <nav
-          className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-center lg:flex-col"
-          style={{
-            width: "108.08px",
-            height: "160px",
-            gap: "10px",
-          }}
-        >
-          <a
-            href="#faq"
-            className="text-white hover:text-blue-400 transition-colors"
-          >
-            FAQ
-          </a>
-          <a
-            href="#ecosystem"
-            className="text-white hover:text-blue-400 transition-colors"
-          >
-            Ecosystem
-          </a>
-          <a
-            href="#how-to-buy"
-            className="text-white hover:text-blue-400 transition-colors"
-          >
-            How To Buy
-          </a>
-          <a
-            href="#about"
-            className="text-white hover:text-blue-400 transition-colors"
-          >
-            About
-          </a>
-          <a
-            href="#battle-plan"
-            className="text-white hover:text-blue-400 transition-colors"
-          >
-            Battle Plan
-          </a>
-        </nav>
-
-        {/* Social Icons */}
-        <div className="flex space-x-3">
-          <a
-            href="#"
-            className="bg-yellow-400 p-2 rounded hover:bg-yellow-500 transition-colors"
-          >
-            <span className="text-black font-bold">📧</span>
-          </a>
-          <a
-            href="#"
-            className="bg-gray-600 p-2 rounded hover:bg-gray-700 transition-colors"
-          >
-            <span className="text-white font-bold">✕</span>
-          </a>
+        {/* Copyright */}
+        <div className="text-center text-gray-400 mt-10 px-4 text-[10px] sm:text-[11px] leading-relaxed tracking-wide uppercase max-w-4xl mx-auto">
+          CAPTAINMEK IS A MEME-BASED PROJECT FOR ENTERTAINMENT. $MEK IS A UTILITY
+          MEME COIN. NOTHING HERE IS FINANCIAL ADVICE. ALWAYS DYOR. CRYPTO IS A
+          SPORT — SPEND AND TRADE WISELY.
         </div>
-      </div>
-
-      {/* Copyright */}
-      <div className="text-center text-gray-400 mt-6 px-4 font-exo font-light italic text-[10px] leading-4 tracking-[0.4px] uppercase">
-        CAPTAINMEK IS A MEME-BASED PROJECT FOR ENTERTAINMENT. $MEK IS A UTILITY
-        MEME COIN. NOTHING HERE IS FINANCIAL ADVICE. ALWAYS DYOR. CRYPTO IS A
-        SPORT — SPEND AND TRADE WISELY.
       </div>
     </footer>
   );

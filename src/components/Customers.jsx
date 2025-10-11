@@ -1,4 +1,3 @@
-import React from "react";
 import a from "../assets/a.webp";
 import b from "../assets/b.webp";
 import c from "../assets/c.webp";
@@ -12,24 +11,26 @@ function Customers() {
   const images = [a, b, c, d, e, f, g];
 
   return (
-    <div className="py-10">
-      <h2 className="font-halo font-normal text-[26px] leading-[100%] text-center lg:text-[54px] mb-8">
-        Our Customers
-      </h2>
+    <section className="py-12 md:py-16 lg:py-20 bg-[#0F172A]">
+      <div className="max-w-[1920px] mx-auto px-4">
+        <h2 className="font-halo font-normal text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-tight text-center mb-10 md:mb-12 lg:mb-16">
+          Our Customers
+        </h2>
 
-      <Marquee gradient={false} speed={50}>
-        <div className="flex gap-6 items-center">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt={`Customer ${index + 1}`}
-              className="h-15 lg:h-15 object-contain"
-            />
-          ))}
-        </div>
-      </Marquee>
-    </div>
+        <Marquee gradient={false} speed={50} pauseOnHover={true}>
+          <div className="flex gap-8 md:gap-12 lg:gap-16 items-center px-4">
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Customer ${index + 1}`}
+                className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+            ))}
+          </div>
+        </Marquee>
+      </div>
+    </section>
   );
 }
 

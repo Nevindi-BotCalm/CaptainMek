@@ -1,4 +1,3 @@
-import React from "react";
 import Marquee from "react-fast-marquee";
 import image2 from "../assets/image2.webp";
 import image3 from "../assets/image3.webp";
@@ -54,8 +53,8 @@ function HeroSection() {
                    lg:w-[350px] lg:h-[418px] lg:top-[30%] lg:right-[5%] lg:left-auto walking"
       />
 
-      <div className="absolute w-full rotate-[-1deg] bottom-0">
-        <Marquee className="bg-black/60 py-3 sm:py-4">
+      <div className="absolute w-full rotate-[-1deg] bottom-0 z-10">
+        <Marquee className="bg-black/70 backdrop-blur-sm py-3 sm:py-4">
           {Array.from({ length: 30 }).map((_, index) => (
             <span
               key={index}

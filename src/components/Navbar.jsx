@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import image1 from '../assets/image1.webp';
 import MenuIcon from './icons/MenuIcon';
 import UserSettingsIcon from './icons/UserSettingsIcon';
@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 w-full max-w-[1920px] mx-auto min-h-[70px] md:h-[90px] flex items-center justify-between px-4 sm:px-6 lg:px-10 py-4 bg-[#0F172A]">
+      <header className="fixed top-0 left-0 right-0 z-50 w-full max-w-[1920px] mx-auto h-[70px] md:h-[90px] flex items-center justify-between px-4 sm:px-6 lg:px-10 bg-[#0F172A] shadow-lg">
         {/* Logo */}
         <div className="flex-shrink-0">
           <a href="#home" onClick={(e) => handleSmoothScroll(e, '#home')} className="block cursor-pointer">
@@ -58,7 +58,7 @@ const Navbar = () => {
         <div className="hidden xl:flex items-center gap-4">
           <LanguageSelector />
           
-          <button className="flex items-center gap-2 bg-[#FEE5A9] hover:bg-[#1E3A8A] text-black font-bold py-2 px-6 rounded-lg transition-colors">
+          <button className="flex items-center gap-2 bg-[#FEE5A9] hover:bg-[#E5CE9F] text-black font-bold py-2 px-6 rounded-lg transition-all duration-300 hover:scale-105">
             <UserSettingsIcon width={20} height={20} color="black" />
             <span>Log In</span>
           </button>
@@ -67,7 +67,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Buttons */}
         <div className="flex xl:hidden items-center gap-2 sm:gap-4">
-          <button className="bg-[#F5DEB3] text-[#1E293B] font-bold py-2 px-3 sm:px-4 rounded-lg hover:bg-[#E5CE9F] transition-colors text-sm sm:text-base">
+          <button className="bg-[#FEE5A9] text-[#1E293B] font-bold py-2 px-3 sm:px-4 rounded-lg hover:bg-[#E5CE9F] transition-all duration-300 text-sm sm:text-base">
             Log In
           </button>
           

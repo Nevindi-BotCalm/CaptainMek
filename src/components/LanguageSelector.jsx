@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import GlobeIcon from './icons/GlobeIcon';
 import ChevronDownIcon from './icons/ChevronDownIcon';
 
@@ -35,7 +35,7 @@ const LanguageSelector = () => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 bg-[#FEE5A9] text-[#1E293B] px-4 py-2 rounded-lg font-medium hover:bg-[#E5CE9F] transition-colors"
+        className="flex items-center gap-2 bg-[#FEE5A9] text-[#1E293B] px-4 py-2 rounded-lg font-medium hover:bg-[#E5CE9F] transition-all duration-300 hover:scale-105"
       >
         <GlobeIcon width={20} height={20} color="#1E293B" />
         <span>{selectedLanguage}</span>
@@ -43,7 +43,7 @@ const LanguageSelector = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg py-2 min-w-[150px] z-50">
+        <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl py-2 min-w-[150px] z-50 animate-fadeIn">
           {languages.map((language) => (
             <button
               key={language}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import battle from "../assets/Battle.webp";
 import vector1 from "../assets/Vector 1.webp";
 import vector2 from "../assets/Vector 2.webp";
@@ -46,11 +46,11 @@ function BattlePlan() {
   };
 
   return (
-      <div
-        className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-hidden opacity-100 px-4 py-10 h-[750px] sm:h-[850px md:min-h-screen md:mt-[150px]   xl:mt-[100px] xl:h-[1200px]" style={{ backgroundImage: `url(${battle})` }}>
-
-  
-      <div className="relative w-full mx-auto h-[1200px] opacity-100 py-10 px-4">
+    <section
+      className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-hidden px-4 py-10 min-h-[750px] sm:min-h-[850px] md:min-h-screen md:mt-[150px] xl:mt-[100px] xl:min-h-[1200px]"
+      style={{ backgroundImage: `url(${battle})` }}
+    >
+      <div className="relative w-full mx-auto min-h-[1200px] py-10 px-4">
         <div
           className="flex flex-col items-center justify-center mt-6 md:hidden"
           onTouchStart={handleTouchStart}
@@ -58,22 +58,23 @@ function BattlePlan() {
           onTouchEnd={handleTouchEnd}
         >
           {/* Title */}
-          <h2 className="text-white font-[Halo_Dek] text-[20px] text-center tracking-wide mb-5 mt-[100px]">
+          <h2 className="text-white font-halo text-[24px] sm:text-[28px] text-center tracking-wide mb-6 mt-[100px]">
             BATTLE PLAN
           </h2>
 
           {/* Phase Image */}
           <img
             src={phases[currentPhase].image}
-            alt="Phase"
-            className="w-[180px] h-[200px] object-contain mb-4"
+            alt={phases[currentPhase].text}
+            className="w-[200px] h-[220px] object-contain mb-6"
           />
 
           {/* Phase Text */}
           <div
-            className="bg-[#FEE5A9] border border-gray-300 rounded-[20px] flex items-center justify-center font-medium px-5 py-3  w-[220px] shadow-md"
-            style={{filter: "blur(0.5px)", boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)", }} >
-            <span className="bg-gradient-to-b from-[#330051] to-[#506EFF] bg-clip-text text-transparent text-[12px] text-center">
+            className="bg-[#FEE5A9] border border-gray-300 rounded-[20px] flex items-center justify-center font-medium px-6 py-4 w-[240px] shadow-lg"
+            style={{ boxShadow: "0 0 15px rgba(255, 255, 255, 0.4)" }}
+          >
+            <span className="bg-gradient-to-b from-[#330051] to-[#506EFF] bg-clip-text text-transparent text-[13px] sm:text-[14px] text-center font-semibold">
               {phases[currentPhase].text}
             </span>
           </div>
@@ -97,8 +98,8 @@ function BattlePlan() {
                 "0x71257312753EA7A2570a5a327bE4EA7A2570a5a32"
               )
             }
-            className="mt-5 w-[349px] h-[66px] bg-[#1E1E4F] border-[4px] border-[#506EFF] text-white 
-                       text-[12px] rounded-[14px] font-[Exo] font-bold flex items-center justify-center gap-2"
+            className="mt-6 w-full max-w-[349px] h-[66px] bg-[#1E1E4F] border-[4px] border-[#506EFF] text-white 
+                       text-[11px] sm:text-[12px] rounded-[14px] font-bold flex items-center justify-center gap-2 hover:bg-[#2A2A6F] transition-colors duration-300"
           >
             0x71257312753EA7A2570a5a327bE4EA7A2570a5a32
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
@@ -109,8 +110,8 @@ function BattlePlan() {
 
         <div className="hidden md:block">
           <h2
-            className="absolute text-white font-[Halo_Dek] text-[36px] lg:text-[74px] leading-[100%]
-                       text-center w-[394px] h-[77px] top-[221px] left-[50%] -translate-x-1/2"
+            className="absolute text-white font-halo text-[36px] lg:text-[64px] xl:text-[74px] leading-tight
+                       text-center top-[221px] left-[50%] -translate-x-1/2"
           >
             BATTLE PLAN
           </h2>
@@ -183,15 +184,8 @@ function BattlePlan() {
                 "0x71257312753EA7A2570a5a327bE4EA7A2570a5a32"
               )
             }
-            className="absolute hidden md:flex w-[1079px] h-[96px] bottom-20 left-1/2 transform -translate-x-1/2 bg-[#1E1E4F] border-[10px] border-[#506EFF] text-white 
-                       text-[36px] rounded-[14px] font-[Exo] font-bold leading-[100%] text-center items-center justify-center"
-            style={{
-              paddingTop: "20px",
-              paddingRight: "96px",
-              paddingBottom: "20px",
-              paddingLeft: "96px",
-              gap: "10px",
-            }}
+            className="absolute hidden md:flex w-[90%] max-w-[1079px] h-[96px] bottom-20 left-1/2 transform -translate-x-1/2 bg-[#1E1E4F] border-[8px] lg:border-[10px] border-[#506EFF] text-white 
+                       text-[24px] lg:text-[32px] xl:text-[36px] rounded-[14px] font-bold leading-tight text-center items-center justify-center gap-3 px-8 hover:bg-[#2A2A6F] transition-colors duration-300"
           >
             0x71257312753EA7A2570a5a327bE4EA7A2570a5a32
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
@@ -199,8 +193,8 @@ function BattlePlan() {
             </svg>
           </button>
         </div>
-      </div>
-    </div>
+        </div>
+      </section>
   );
 }
 

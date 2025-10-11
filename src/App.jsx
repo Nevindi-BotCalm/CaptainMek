@@ -13,28 +13,38 @@ import BattlePlan from "./components/BattlePlan";
 
 function App() {
   return (
-    <div className="App bg-[#0F172A] min-h-screen text-white">
-    {/* <CursorTrail /> */}
+    <div className="App bg-[#0F172A] min-h-screen text-white overflow-x-hidden">
+      {/* <CursorTrail /> */}
       <Navbar />
-      <section id="home">
-        <HeroSection />
-      </section>
-      <Customers />
-      <section id="about">
-        <AboutSection />
-      </section> 
-      <section id="ecosystem">
-        <EcoSystem />
-      </section>
-      <section id="how-to-buy">
-        <HowToBuy />
-      </section>
-      <section id="battle-plan">
-        <BattlePlan />
-      </section>
-      <section id="faq">
-        <FAQ />
-      </section>
+      
+      <main>
+        <section id="home">
+          <HeroSection />
+        </section>
+        
+        <Customers />
+        
+        <section id="about">
+          <AboutSection />
+        </section>
+        
+        <section id="ecosystem">
+          <EcoSystem />
+        </section>
+        
+        <section id="how-to-buy">
+          <HowToBuy />
+        </section>
+        
+        <section id="battle-plan">
+          <BattlePlan />
+        </section>
+        
+        <section id="faq">
+          <FAQ />
+        </section>
+      </main>
+      
       <Footer />
     </div>
   );

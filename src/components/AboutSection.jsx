@@ -1,4 +1,3 @@
-import React from "react";
 import image8 from "../assets/image8.webp";
 import image9 from "../assets/image9.webp";
 import AboutSectionResponsive1 from "../assets/AboutSectionResponsive1.webp";
@@ -15,22 +14,30 @@ function AboutSection() {
       />
 
       {/* Main Content (Desktop & Laptop) */}
-      <div className="hidden sm:hidden md:flex relative justify-between items-start max-w-[1600px] mx-auto px-8 xl:px-20 -mt-[900px] xl:-mt-[1100px]">
+      <div className="hidden md:flex relative justify-between items-start max-w-[1600px] mx-auto px-8 xl:px-20 -mt-[900px] xl:-mt-[1100px]">
         {/* Captain Mek Image */}
 
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-center items-start">
           <img
             src={image9}
             alt="Captain Mek Character"
-            className="w-[300px] lg:w-[400px] xl:w-[507px] h-auto object-contain lg:ml-35 mt-[-60px] animate-captainmek"
+            className="w-[300px] lg:w-[400px] xl:w-[507px] h-auto object-contain mt-[-60px] animate-captainmek"
           />
         </div>
 
         {/* About Text Section */}
         <div className="flex-1 relative">
+          {/* <div
+            className="font-halo text-black font-normal bg-[#D9D9D9] bg-cover bg-center bg-no-repeat 
+             inline-block px-4 py-2 text-[48px] lg:left-60 lg:text-[64px] mb-6 rotate-[-5deg] shadow-lg"
+          >
+            ABOUT
+          </div> */}
+
           <div
-            className="font-halo text-black font-normal  bg-[#D9D9D9] bg-cover bg-center bg-no-repeat 
-             inline-block px-2 py-1 text-[48px] lg:text-[64px] mb-6 rotate-[-5deg] -ml-6 lg:-ml-100"
+            className="font-halo text-black font-normal bg-[#D9D9D9] bg-cover bg-center bg-no-repeat
+  inline-block px-4 py-2 text-[48px] lg:text-[64px] mb-6 rotate-[-5deg] shadow-lg 
+  relative left-1000 lg:left-[-600px] xl:left-[-600px]"
           >
             ABOUT
           </div>
