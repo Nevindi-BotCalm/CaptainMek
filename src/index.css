@@ -230,17 +230,16 @@
   animation: fadein 1.5s ease-out forwards, float 3.5s ease-in-out 1.5s infinite, powerup 3s ease-in-out 1.5s infinite;
 }
 
-/* optional: fade out animation */
-.cursor-spark {
-  opacity: 1;
-  animation: fadeOut 0.5s forwards;
+.absolute {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0; transform: scale(0.5); }
-}
+.absolute:hover {
+  transform: translateY(-5px) scale(1.02);
 
+  z-index: 10;
+}
 
 
 html {

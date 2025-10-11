@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className=" hidden lg:flex items-center gap-6 xl:gap-8">
+        <nav className=" hidden xl:flex items-center gap-6 xl:gap-8">
           <ul className="flex items-center gap-6 xl:gap-8 text-white">
             {navLinks.map((link) => (
               <li key={link.name}>
@@ -55,7 +55,7 @@ const Navbar = () => {
         </nav>
 
       
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-4">
           <LanguageSelector />
           
           <button className="flex items-center gap-2 bg-[#FEE5A9] hover:bg-[#1E3A8A] text-black font-bold py-2 px-6 rounded-lg transition-colors">
@@ -66,7 +66,7 @@ const Navbar = () => {
 
 
         {/* Mobile Menu Buttons */}
-        <div className="flex lg:hidden items-center gap-2 sm:gap-4">
+        <div className="flex xl:hidden items-center gap-2 sm:gap-4">
           <button className="bg-[#F5DEB3] text-[#1E293B] font-bold py-2 px-3 sm:px-4 rounded-lg hover:bg-[#E5CE9F] transition-colors text-sm sm:text-base">
             Log In
           </button>

@@ -13,14 +13,12 @@ function HeroSection() {
       className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${image2})` }}
     >
-     
       <img
         src={image2}
         alt="Captain Mek background"
         className="absolute top-0 left-0 w-full h-full object-cover opacity-90"
       />
 
-     
       <img
         src={image3}
         alt="Captain Mek hero"
@@ -29,7 +27,6 @@ function HeroSection() {
                    lg:w-[588px] lg:h-[604px] rotate-180 mix-blend-luminosity neonRainbow"
       />
 
-    
       <img
         src={image4}
         alt="Captain Mek wave"
@@ -40,7 +37,6 @@ function HeroSection() {
                    lg:w-[700px] lg:h-[382px] lg:top-[40%] lg:left-[8%]"
       />
 
-     
       <img
         src={image6}
         alt="Captain Mek fly"
@@ -51,28 +47,25 @@ function HeroSection() {
                    lg:w-[350px] lg:h-[232px] lg:top-[12%] lg:left-[12%] fly"
       />
 
-   
       <img
         src={image5}
         alt="Captain Mek walking"
-        className="absolute 
-                   w-[140px] h-[180px] top-[65%] left-[55%]
-                   sm:w-[180px] sm:h-[230px]
-                   md:w-[250px] md:h-[300px] md:left-[70%]
+        className="absolute  w-[140px] h-[180px] top-[65%] left-[55%] sm:w-[180px] sm:h-[230px] md:w-[250px] md:h-[300px md:left-[70%]
                    lg:w-[350px] lg:h-[418px] lg:top-[30%] lg:right-[5%] lg:left-auto walking"
       />
 
-  
-      <div
-        className="absolute w-full rotate-[-1deg] bottom-0"
-      >
+      <div className="absolute w-full rotate-[-1deg] bottom-0">
         <Marquee className="bg-black/60 py-3 sm:py-4">
           {Array.from({ length: 30 }).map((_, index) => (
             <span
               key={index}
               className="flex items-center text-white text-[12px] sm:text-[14px] md:text-[16px] lg:text-xl font-['Exo'] font-normal uppercase mr-6 sm:mr-8"
             >
-              <img src={image7} alt="" className="inline w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+              <img
+                src={image7}
+                alt=""
+                className="inline w-4 h-4 sm:w-5 sm:h-5 mr-2"
+              />
               BECOME A MEME LEGEND BEFORE LIFTOFF!
             </span>
           ))}

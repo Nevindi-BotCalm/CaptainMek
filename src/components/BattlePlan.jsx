@@ -7,12 +7,13 @@ import phace2 from "../assets/phace2.webp";
 import phace3 from "../assets/phace3.webp";
 import phace4 from "../assets/phace4.webp";
 import phace5 from "../assets/phace5.webp";
+import title from "../assets/tittle.webp";
 
 function BattlePlan() {
   const [currentPhase, setCurrentPhase] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
-
+ 
   const phases = [
     { text: "Phase 1: Unite the Legends", image: phace1 },
     { text: "Phase 2: Rise of the Mek Crew", image: phace2 },
@@ -46,16 +47,7 @@ function BattlePlan() {
 
   return (
       <div
-        className="
-      relative w-full max-w-[1920px] mx-auto
-      bg-cover bg-center bg-no-repeat
-      overflow-hidden opacity-100
-      px-4 py-10
-      h-[750px] sm:h-[850px] md:min-h-screen
-      md:mt-[150px]   xl:mt-[100px] xl:h-[1200px]
-    "
-        style={{ backgroundImage: `url(${battle})` }}
-      >
+        className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-hidden opacity-100 px-4 py-10 h-[750px] sm:h-[850px md:min-h-screen md:mt-[150px]   xl:mt-[100px] xl:h-[1200px]" style={{ backgroundImage: `url(${battle})` }}>
 
   
       <div className="relative w-full mx-auto h-[1200px] opacity-100 py-10 px-4">
@@ -66,7 +58,7 @@ function BattlePlan() {
           onTouchEnd={handleTouchEnd}
         >
           {/* Title */}
-          <h2 className="text-white font-[Halo_Dek] text-[20px] text-center tracking-wide mb-5">
+          <h2 className="text-white font-[Halo_Dek] text-[20px] text-center tracking-wide mb-5 mt-[100px]">
             BATTLE PLAN
           </h2>
 
@@ -79,14 +71,8 @@ function BattlePlan() {
 
           {/* Phase Text */}
           <div
-            className="bg-[#FEE5A9] border border-gray-300 rounded-[20px] 
-                       flex items-center justify-center font-medium px-5 py-3 
-                       w-[220px] shadow-md"
-            style={{
-              filter: "blur(0.5px)",
-              boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
-            }}
-          >
+            className="bg-[#FEE5A9] border border-gray-300 rounded-[20px] flex items-center justify-center font-medium px-5 py-3  w-[220px] shadow-md"
+            style={{filter: "blur(0.5px)", boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)", }} >
             <span className="bg-gradient-to-b from-[#330051] to-[#506EFF] bg-clip-text text-transparent text-[12px] text-center">
               {phases[currentPhase].text}
             </span>

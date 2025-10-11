@@ -14,7 +14,7 @@ import BattlePlan from "./components/BattlePlan";
 function App() {
   return (
     <div className="App bg-[#0F172A] min-h-screen text-white">
-    <CursorTrail />
+    {/* <CursorTrail /> */}
       <Navbar />
       <section id="home">
         <HeroSection />
@@ -22,7 +22,7 @@ function App() {
       <Customers />
       <section id="about">
         <AboutSection />
-      </section>
+      </section> 
       <section id="ecosystem">
         <EcoSystem />
       </section>
