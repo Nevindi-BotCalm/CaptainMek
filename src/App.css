@@ -1,3 +1,35 @@
+/* Falling stars layer */
+.falling-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* Clicks pass through */
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Single star */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(white, transparent);
+  transform: rotate(45deg);
+  opacity: 0.8;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
 
 .smoking-animation {
   animation: smoke 3s infinite;
@@ -17,3 +49,4 @@
     transform: translateY(0);
   }
 }
+

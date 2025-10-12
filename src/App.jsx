@@ -52,8 +52,8 @@
 
 // export default App;
 
+// {/* With background image*/}
 
-{/* With background image*/}
 import React, { useEffect, useState } from "react";
 import "./index.css";
 import "./App.css";
@@ -66,7 +66,6 @@ import HowToBuy from "./components/HowToBuySection";
 import Footer from "./components/Footer";
 import FAQ from "./components/FAQSection";
 import BattlePlan from "./components/BattlePlan";
-// import CursorTrail from "./components/CursorTrail";
 import bgFull from "./assets/fullbackground.webp";
 
 function App() {
