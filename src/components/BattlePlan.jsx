@@ -13,7 +13,7 @@ function BattlePlan() {
   const [currentPhase, setCurrentPhase] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
- 
+
   const phases = [
     { text: "Phase 1: Unite the Legends", image: phace1 },
     { text: "Phase 2: Rise of the Mek Crew", image: phace2 },
@@ -51,14 +51,15 @@ function BattlePlan() {
       style={{ backgroundImage: `url(${battle})` }}
     >
       <div className="relative w-full mx-auto min-h-[1200px] py-10 px-4">
+        {/* 📱 Mobile + Tablet Layout */}
         <div
-          className="flex flex-col items-center justify-center mt-6 md:hidden"
+          className="flex flex-col items-center justify-center mt-6 md:flex lg:hidden"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
           {/* Title */}
-          <h2 className="text-white font-halo text-[24px] sm:text-[28px] text-center tracking-wide mb-6 mt-[100px]">
+          <h2 className="text-white font-halo text-[24px] sm:text-[28px] md:text-[36px] text-center tracking-wide mb-6 mt-[100px]">
             BATTLE PLAN
           </h2>
 
@@ -66,15 +67,15 @@ function BattlePlan() {
           <img
             src={phases[currentPhase].image}
             alt={phases[currentPhase].text}
-            className="w-[200px] h-[220px] object-contain mb-6"
+            className="w-[200px] h-[220px] md:w-[260px] md:h-[280px] object-contain mb-6"
           />
 
           {/* Phase Text */}
           <div
-            className="bg-[#FEE5A9] border border-gray-300 rounded-[20px] flex items-center justify-center font-medium px-6 py-4 w-[240px] shadow-lg"
+            className="bg-[#FEE5A9] border border-gray-300 rounded-[20px] flex items-center justify-center font-medium px-6 py-4 w-[240px] md:w-[280px] shadow-lg"
             style={{ boxShadow: "0 0 15px rgba(255, 255, 255, 0.4)" }}
           >
-            <span className="bg-gradient-to-b from-[#330051] to-[#506EFF] bg-clip-text text-transparent text-[13px] sm:text-[14px] text-center font-semibold">
+            <span className="bg-gradient-to-b from-[#330051] to-[#506EFF] bg-clip-text text-transparent text-[13px] sm:text-[14px] md:text-[16px] text-center font-semibold">
               {phases[currentPhase].text}
             </span>
           </div>
@@ -98,8 +99,8 @@ function BattlePlan() {
                 "0x71257312753EA7A2570a5a327bE4EA7A2570a5a32"
               )
             }
-            className="mt-6 w-full max-w-[349px] h-[66px] bg-[#1E1E4F] border-[4px] border-[#506EFF] text-white 
-                       text-[11px] sm:text-[12px] rounded-[14px] font-bold flex items-center justify-center gap-2 hover:bg-[#2A2A6F] transition-colors duration-300"
+            className="mt-6 w-full max-w-[349px] h-[66px] bg-[#1E1E4F] border-[4px] border-[#506EFF] text-white
+                       text-[11px] sm:text-[12px] md:text-[14px] rounded-[14px] font-bold flex items-center justify-center gap-2 hover:bg-[#2A2A6F] transition-colors duration-300"
           >
             0x71257312753EA7A2570a5a327bE4EA7A2570a5a32
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
@@ -108,7 +109,8 @@ function BattlePlan() {
           </button>
         </div>
 
-        <div className="hidden md:block">
+        {/* 💻 Desktop Layout (unchanged) */}
+        <div className="hidden lg:block">
           <h2
             className="absolute text-white font-halo text-[36px] lg:text-[64px] xl:text-[74px] leading-tight
                        text-center top-[221px] left-[50%] -translate-x-1/2"
@@ -134,8 +136,8 @@ function BattlePlan() {
 
           {/* Left Phase Card */}
           <div
-            className="absolute w-[453px] h-[72px] top-[400px] left-[315px] bg-[#FEE5A9] 
-                       border border-gray-300 rounded-[32px] flex items-center justify-center 
+            className="absolute w-[453px] h-[72px] top-[400px] left-[315px] bg-[#FEE5A9]
+                       border border-gray-300 rounded-[32px] flex items-center justify-center
                        font-medium px-7 py-5"
             style={{
               filter: "blur(0.5px)",
@@ -147,11 +149,10 @@ function BattlePlan() {
             </span>
           </div>
 
-
           {/* Right Phase Card */}
           <div
-            className="absolute w-[300px] h-[50px] top-[250px] right-[264px] bg-[#FEE5A9] 
-                       border border-gray-300 rounded-[32px] flex items-center justify-center 
+            className="absolute w-[300px] h-[50px] top-[250px] right-[264px] bg-[#FEE5A9]
+                       border border-gray-300 rounded-[32px] flex items-center justify-center
                        font-medium px-5 py-4"
             style={{
               filter: "blur(0.5px)",
@@ -184,7 +185,7 @@ function BattlePlan() {
                 "0x71257312753EA7A2570a5a327bE4EA7A2570a5a32"
               )
             }
-            className="absolute hidden md:flex w-[90%] max-w-[1079px] h-[96px] bottom-20 left-1/2 transform -translate-x-1/2 bg-[#1E1E4F] border-[8px] lg:border-[10px] border-[#506EFF] text-white 
+            className="absolute hidden md:flex w-[90%] max-w-[1079px] h-[96px] bottom-20 left-1/2 transform -translate-x-1/2 bg-[#1E1E4F] border-[8px] lg:border-[10px] border-[#506EFF] text-white
                        text-[24px] lg:text-[32px] xl:text-[36px] rounded-[14px] font-bold leading-tight text-center items-center justify-center gap-3 px-8 hover:bg-[#2A2A6F] transition-colors duration-300"
           >
             0x71257312753EA7A2570a5a327bE4EA7A2570a5a32
@@ -193,9 +194,10 @@ function BattlePlan() {
             </svg>
           </button>
         </div>
-        </div>
-      </section>
+      </div>
+    </section>
   );
 }
 
 export default BattlePlan;
+

@@ -21,7 +21,7 @@ function AboutSection() {
           <img
             src={image9}
             alt="Captain Mek Character"
-            className="w-[300px] lg:w-[400px] xl:w-[507px] h-auto object-contain mt-[-60px] animate-captainmek"
+            className="w-[300px]  lg:w-[400px] xl:w-[507px] h-auto object-contain mt-[-60px] animate-captainmek"
           />
         </div>
 
