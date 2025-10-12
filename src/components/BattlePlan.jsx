@@ -7,7 +7,7 @@ import phace2 from "../assets/phace2.webp";
 import phace3 from "../assets/phace3.webp";
 import phace4 from "../assets/phace4.webp";
 import phace5 from "../assets/phace5.webp";
-import title from "../assets/tittle.webp";
+
 
 function BattlePlan() {
   const [currentPhase, setCurrentPhase] = useState(0);
@@ -51,7 +51,7 @@ function BattlePlan() {
       style={{ backgroundImage: `url(${battle})` }}
     >
       <div className="relative w-full mx-auto min-h-[1200px] py-10 px-4">
-        {/* 📱 Mobile + Tablet Layout */}
+        {/*  Mobile + Tablet Layout */}
         <div
           className="flex flex-col items-center justify-center mt-6 md:flex lg:hidden"
           onTouchStart={handleTouchStart}
@@ -109,7 +109,7 @@ function BattlePlan() {
           </button>
         </div>
 
-        {/* 💻 Desktop Layout (unchanged) */}
+        {/* Desktop Layout (unchanged) */}
         <div className="hidden lg:block">
           <h2
             className="absolute text-white font-halo text-[36px] lg:text-[64px] xl:text-[74px] leading-tight

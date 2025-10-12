@@ -21,23 +21,17 @@ function AboutSection() {
           <img
             src={image9}
             alt="Captain Mek Character"
-            className="w-[300px]  lg:w-[400px] xl:w-[507px] h-auto object-contain mt-[-60px] animate-captainmek"
+            className="w-[300px] lg:w-[500px] xl:w-[507px] h-auto object-contain mt-[-60px] -ml-4 lg:ml-[150px] animate-captainmek"
           />
         </div>
 
         {/* About Text Section */}
         <div className="flex-1 relative">
-          {/* <div
-            className="font-halo text-black font-normal bg-[#D9D9D9] bg-cover bg-center bg-no-repeat 
-             inline-block px-4 py-2 text-[48px] lg:left-60 lg:text-[64px] mb-6 rotate-[-5deg] shadow-lg"
-          >
-            ABOUT
-          </div> */}
 
           <div
             className="font-halo text-black font-normal bg-[#D9D9D9] bg-cover bg-center bg-no-repeat
   inline-block px-4 py-2 text-[48px] lg:text-[64px] mb-6 rotate-[-5deg] shadow-lg 
-  relative left-1000 lg:left-[-600px] xl:left-[-600px]"
+  relative left-1000 lg:left-[-600px] xl:left-[-600px] lg:ml-[200px] "
           >
             ABOUT
           </div>
