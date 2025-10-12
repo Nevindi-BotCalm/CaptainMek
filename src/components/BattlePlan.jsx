@@ -8,7 +8,6 @@ import phace3 from "../assets/phace3.webp";
 import phace4 from "../assets/phace4.webp";
 import phace5 from "../assets/phace5.webp";
 
-
 function BattlePlan() {
   const [currentPhase, setCurrentPhase] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
@@ -47,19 +46,19 @@ function BattlePlan() {
 
   return (
     <section
-      className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-hidden px-4 py-10 min-h-[750px] sm:min-h-[850px] md:min-h-screen md:mt-[150px] xl:mt-[100px] xl:min-h-[1200px]"
+      className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-hidden px-4 py-10 min-h-[750px] sm:min-h-[850px] md:h-[450px] md:mt-[150px] xl:mt-[100px] xl:min-h-[1200px]"
       style={{ backgroundImage: `url(${battle})` }}
     >
       <div className="relative w-full mx-auto min-h-[1200px] py-10 px-4">
         {/*  Mobile + Tablet Layout */}
         <div
-          className="flex flex-col items-center justify-center mt-6 md:flex lg:hidden"
+          className="flex flex-col items-center justify-center mt-6 md:flex xl:hidden"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
           {/* Title */}
-          <h2 className="text-white font-halo text-[24px] sm:text-[28px] md:text-[36px] text-center tracking-wide mb-6 mt-[100px]">
+          <h2 className=" text-white font-halo text-[24px] sm:text-[28px] md:text-[36px] text-center tracking-wide mb-6 mt-[100px] ">
             BATTLE PLAN
           </h2>
 
@@ -109,11 +108,11 @@ function BattlePlan() {
           </button>
         </div>
 
-        {/* Desktop Layout (unchanged) */}
-        <div className="hidden lg:block">
+        {/* Desktop Layout */}
+        <div className="hidden lg:hidden xl:flex">
           <h2
             className="absolute text-white font-halo text-[36px] lg:text-[64px] xl:text-[74px] leading-tight
-                       text-center top-[221px] left-[50%] -translate-x-1/2"
+                       text-center top-[211px] left-[40%] -translate-x-1/2"
           >
             BATTLE PLAN
           </h2>
@@ -136,7 +135,7 @@ function BattlePlan() {
 
           {/* Left Phase Card */}
           <div
-            className="absolute w-[453px] h-[72px] top-[400px] left-[315px] bg-[#FEE5A9]
+            className="absolute w-[390px] h-[65px] top-[400px] left-[315px] bg-[#FEE5A9]
                        border border-gray-300 rounded-[32px] flex items-center justify-center
                        font-medium px-7 py-5"
             style={{
@@ -149,11 +148,13 @@ function BattlePlan() {
             </span>
           </div>
 
-          {/* Right Phase Card */}
+          {/* Right Phase Cvard */}
           <div
-            className="absolute w-[300px] h-[50px] top-[250px] right-[264px] bg-[#FEE5A9]
+            className="absolute w-[390px] h-[65px] top-[300px] right-[264px] bg-[#FEE5A9]
                        border border-gray-300 rounded-[32px] flex items-center justify-center
-                       font-medium px-5 py-4"
+                       font-medium px-7
+                       
+                        py-5"
             style={{
               filter: "blur(0.5px)",
               boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
@@ -189,7 +190,7 @@ function BattlePlan() {
                        text-[24px] lg:text-[32px] xl:text-[36px] rounded-[14px] font-bold leading-tight text-center items-center justify-center gap-3 px-8 hover:bg-[#2A2A6F] transition-colors duration-300"
           >
             0x71257312753EA7A2570a5a327bE4EA7A2570a5a32
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <svg width="24" height="30" viewBox="0 0 24 24" fill="currentColor">
               <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
             </svg>
           </button>
@@ -200,4 +201,3 @@ function BattlePlan() {
 }
 
 export default BattlePlan;
-

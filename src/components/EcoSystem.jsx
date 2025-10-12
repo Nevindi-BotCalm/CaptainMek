@@ -5,7 +5,7 @@ import image13 from "../assets/image13.webp";
 
 function EcoSystem() {
   return (
-    <div className="relative w-full overflow-hidden mt-[150px] md:mt-[200px] lg:mt-[200px] xl:mt-[550px]">
+    <div className="relative w-full overflow-hidden mt-[150px] md:mt-[200px] lg:mt-[500px] xl:mt-[550px]">
       {/* Desktop / Laptop */}
       <div className="hidden lg:block relative min-h-[800px] xl:min-h-[900px] pb-12 lg:pb-16">
         <div className="relative w-full max-w-[1920px] mx-auto px-4 xl:px-8">
@@ -60,7 +60,7 @@ function EcoSystem() {
             <img
               src={image13}
               alt="Card 13"
-              className="w-full max-w-[500px] h-auto object-contain rounded-lg"
+              className="w-full max-w-[500px] h-auto object-contain rounded-lg md:w-[500px]"
             />
           </div>
           <div className="flex justify-center">

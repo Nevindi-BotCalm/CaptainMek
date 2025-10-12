@@ -5,7 +5,7 @@ import AboutSectionResponsive2 from "../assets/AboutSectionResponsive2.webp";
 
 function AboutSection() {
   return (
-    <div className="relative w-full">
+    <div id="about" className="relative w-full">
       {/* Background Image (Desktop) */}
       <img
         src={image8}
@@ -29,8 +29,8 @@ function AboutSection() {
         {/* About Text Section */}
         <div className="flex-1 relative lg:mt-[-200px] xl:mt-[1px] md:mt-[500px] ">
           <div
-            className="font-halo text-black font-normal bg-[#D9D9D9] bg-cover bg-center bg-no-repeat
-  inline-block px-4 py-2 text-[48px] lg:text-[64px] mb-6 rotate-[-5deg] shadow-lg 
+            className="font-halo text-black font-normal bg-[#d9d9d9] bg-cover bg-center bg-no-repeat
+  inline-block px-8 py-2 text-[48px] lg:text-[64px] mb-6 rotate-[-5deg] shadow-lg 
   relative left-1000 lg:left-[-600px] xl:left-[-600px] lg:ml-[200px]  "
           >
             ABOUT

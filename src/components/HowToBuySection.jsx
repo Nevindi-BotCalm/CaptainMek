@@ -7,7 +7,7 @@ import gradient from "../assets/gradient.webp";
 
 function HowToBuySection() {
   return (
-    <section className="max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto overflow-x-hidden px-4 mt-[100px] md:mt-[150px] lg:mt-[200px] xl:mt-[250px]">
+    <section className="max-w-7xl xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto overflow-x-hidden px-4 mt-[100px] md:mt-[150px] lg:mt-[10px] xl:mt-[150px]">
       <h2 className="text-4xl md:text-6xl xl:text-7xl font-halo font-normal text-white text-center mb-12 md:mb-16 xl:mb-20">
         HOW TO BUY
       </h2>
