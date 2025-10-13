@@ -36,7 +36,6 @@ function HowToBuySection() {
           />
         </div>
 
-        {/* Mobile crypto image without animation */}
         <div className="w-full lg:hidden flex items-center justify-center mt-8">
           <img
             src={crypto}

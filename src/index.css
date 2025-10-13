@@ -241,7 +241,27 @@
   z-index: 10;
 }
 
+@keyframes flyZoomGlow {
+  0% {
+    transform: translateY(50px) scale(0.8) rotate(-5deg);
+    filter: drop-shadow(0 0 0px #00ffff);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05) rotate(-5deg);
+    filter: drop-shadow(0 0 15px #00ffff);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) scale(1) rotate(-5deg);
+    filter: drop-shadow(0 0 8px #00ffff);
+    opacity: 1;
+  }
+}
 
+.animate-flyZoomGlow {
+  animation: flyZoomGlow 3s ease-in-out infinite alternate;
+}
 html {
     scroll-behavior: smooth;
 }
