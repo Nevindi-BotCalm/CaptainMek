@@ -36,26 +36,23 @@ function HowToBuySection() {
           />
         </div>
 
-        <div className="w-full lg:hidden flex items-center justify-center mt-8">
-          <img
-            src={crypto}
-            alt="Crypto"
-            className="w-full max-w-xs sm:max-w-md h-auto object-contain -rotate-[5deg]"
-          />
-        </div>
-
-
         <div className="w-full lg:w-1/2 hidden lg:flex items-center justify-center robot-container relative">
           <img
             src={gradient}
             alt="Gradient Background"
             className="absolute inset-0 w-full h-full object-contain z-0 rounded-full lg:animate-swirlPulse"
           />
+          {/* 
+          <img
+            src={crypto}
+            alt="Crypto"
+            className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl h-auto object-contain -rotate-[5deg]"
+          /> */}
 
           <img
             src={crypto}
             alt="Crypto"
-            className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl h-auto object-contain -rotate-[5deg] lg:animate-fly"
+            className="relative z-10 w-full max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl h-auto object-contain -rotate-[5deg] animate-flyZoom"
           />
         </div>
       </div>

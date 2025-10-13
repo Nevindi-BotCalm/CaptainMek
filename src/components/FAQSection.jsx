@@ -37,7 +37,6 @@ function FAQSection() {
       className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-x-hidden py-12 px-4 sm:py-16 md:py-20 lg:py-24 lg:min-h-[1150px] mt-20"
       style={{ backgroundImage: `url(${FAQ1})` }}
     >
-      
       <div
         className="absolute hidden lg:block w-[1084px] h-[1084px] top-[34px] left-[807px]
         bg-cover bg-center opacity-100"
@@ -60,7 +59,7 @@ function FAQSection() {
             <div
               key={index}
               className="w-full border-2 border-gray-200 rounded-2xl sm:rounded-3xl lg:rounded-[32px] 
-              cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-[#FEE5A9] p-5 sm:p-6"
+              cursor-pointer transition-all duration-200 hover:shadow-xl hover:scale-[1.02] bg-[#FEE5A9] p-5 sm:p-6"
               onClick={() => toggleCard(index)}
             >
               <div className="flex justify-between items-center gap-4">
@@ -75,14 +74,16 @@ function FAQSection() {
                 >
                   {item.question}
                 </span>
-                <span className="text-lg sm:text-xl md:text-2xl font-bold flex-shrink-0 text-[#030049]">
+                <span className="text-lg sm:text-xl md:text-2xl font-bold flex-shrink-0 text-[#030049] transition-transform duration-300 hover:rotate-[360deg]">
                   {openCard === index ? "−" : "+"}
                 </span>
               </div>
 
               <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  openCard === index ? "max-h-[1000px] mt-4 sm:mt-5" : "max-h-0"
+                className={`overflow-hidden ${
+                  openCard === index
+                    ? "max-h-[1000px] mt-4 sm:mt-5 transition-all duration-300 ease-out"
+                    : "max-h-0 transition-all duration-700 ease-in"
                 }`}
               >
                 <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
