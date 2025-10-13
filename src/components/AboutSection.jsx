@@ -6,14 +6,14 @@ import AboutSectionResponsive2 from "../assets/AboutSectionResponsive2.webp";
 function AboutSection() {
   return (
     <div id="about" className="relative w-full">
-      {/* Background Image (Desktop) */}
+      {/* Background Image */}
       <img
         src={image8}
         alt="Background"
         className="hidden sm:hidden md:block w-full max-w-[1920px] mx-auto lg:h-[1440px] object-cover"
       />
 
-      {/* Main Content (Desktop & Laptop) */}
+      
       <div className="hidden md:flex relative justify-between items-start max-w-[1600px] mx-auto px-8 xl:px-20 -mt-[900px] xl:-mt-[1100px] ">
         {/* Captain Mek Image */}
 
@@ -62,22 +62,7 @@ function AboutSection() {
         </div>
       </div>
 
-      {/* Mobile Layout
-      <div className="block md:hidden">
-        <img
-          src={AboutSectionResponsive1}
-          alt="About Section Mobile 1"
-          className="w-full h-auto object-cover"
-        />
-        <img
-          src={AboutSectionResponsive2}
-          alt="About Section Mobile 2"
-          className="w-full h-auto object-cover mt-[-120px]"
-        />
-      </div> */}
-
-      {/* Mobile Layout */}
-      {/* Mobile Layout */}
+      {/* Mobile Layout Images */}
       <div className="block md:hidden relative">
         <img
           src={AboutSectionResponsive1}

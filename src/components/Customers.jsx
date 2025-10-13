@@ -23,9 +23,9 @@ function Customers() {
           gradient={false}
           speed={50}
           pauseOnHover={true}
-          direction="right" // ← marquee right side scroll
-          loop={0} // continuous infinite loop
-          autoFill={true} // fill empty space for seamless effect
+          direction="right"
+          loop={0}
+          autoFill={true}
         >
           <div className="flex gap-8 md:gap-12 lg:gap-16 items-center px-4">
             {[...images, ...images].map((img, index) => (

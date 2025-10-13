@@ -67,7 +67,7 @@ const Footer = () => {
           <div className="flex gap-4">
             {/* Telegram */}
             <a
-              href="https://t.me/yourchannel" // replace with your Telegram link
+              href="https://t.me/yourchannel" 
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FEE5A9] p-3 rounded-lg hover:bg-[#E5CE9F] transition-all duration-300 hover:scale-110"
@@ -76,9 +76,9 @@ const Footer = () => {
               <FaTelegramPlane className="text-black text-2xl" />
             </a>
 
-            {/* Twitter (X) */}
+            {/* Twitter*/}
             <a
-              href="https://twitter.com/yourhandle" // replace with your Twitter link
+              href="https://twitter.com/yourhandle"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FEE5A9] p-3 rounded-lg hover:bg-[#E5CE9F] transition-all duration-300 hover:scale-110"

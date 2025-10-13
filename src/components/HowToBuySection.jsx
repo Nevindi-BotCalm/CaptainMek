@@ -44,7 +44,7 @@ function HowToBuySection() {
           />
         </div>
 
-        {/* Large screen crypto image with animation */}
+
         <div className="w-full lg:w-1/2 hidden lg:flex items-center justify-center robot-container relative">
           <img
             src={gradient}

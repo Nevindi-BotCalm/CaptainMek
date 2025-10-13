@@ -16,30 +16,30 @@ function EcoSystem() {
             </h2>
           </div>
 
-          {/* Image Container - Responsive positioning */}
+          {/* Image Container */}
           <div className="relative w-full h-[600px] xl:h-[700px] 2xl:h-[800px]">
-            {/* Card 13 - Left, with jump animation */}
+            {/* Card 13*/}
             <img
               src={image13}
               alt="Card 13"
               className="absolute w-[36%] xl:w-[38%] max-w-[720px] h-auto top-[8%] left-0 animate-[jump_0.8s_ease-in-out_infinite]"
             />
 
-            {/* Card 10 - Center Left */}
+            {/* Card 10*/}
             <img
               src={image10}
               alt="Card 10"
               className="absolute w-[20%] xl:w-[22%] max-w-[400px] h-auto top-[28%] xl:top-[25%] left-[34%] xl:left-[35%]"
             />
 
-            {/* Card 11 - Center Right */}
+            {/* Card 11 */}
             <img
               src={image11}
               alt="Card 11"
               className="absolute w-[23%] xl:w-[25%] max-w-[470px] h-auto top-[2%] xl:top-[0%] left-[51%] xl:left-[52%]"
             />
 
-            {/* Card 12 - Right */}
+            {/* Card 12*/}
             <img
               src={image12}
               alt="Card 12"
@@ -49,7 +49,7 @@ function EcoSystem() {
         </div>
       </div>
 
-      {/* Tablet Layout (md to lg) */}
+      {/* Tablet Layout*/}
       <div className="hidden md:block lg:hidden px-4">
         <h2 className="font-halo text-[48px] md:text-[56px] font-normal leading-tight text-center mb-10 md:mb-12">
           ECOSYSTEM ARSENAL
@@ -87,7 +87,7 @@ function EcoSystem() {
         </div>
       </div>
 
-      {/* Mobile Layout (below md) */}
+      {/* Mobile Layout*/}
       <div className="block md:hidden w-full px-4 py-8">
         <h2 className="font-halo text-[32px] xs:text-[36px] sm:text-[40px] font-normal leading-tight text-center mb-8 sm:mb-10">
           ECOSYSTEM ARSENAL
