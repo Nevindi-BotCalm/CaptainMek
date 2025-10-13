@@ -72,11 +72,17 @@ const Navbar = () => {
           </button>
           
           <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="text-white p-1.5 sm:p-2 hover:bg-white/10 rounded-lg transition-colors"
-            aria-label="Open menu"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-white p-1.5 sm:p-2 hover:bg-white/10 rounded-lg transition-all duration-300 w-10 h-10 flex items-center justify-center"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
-            <MenuIcon width={24} height={24} color="white" className="sm:w-7 sm:h-7" />
+            <div className="transition-transform duration-300 ease-in-out">
+              {isMobileMenuOpen ? (
+                <span className="text-2xl font-light transform rotate-180 transition-transform duration-300">×</span>
+              ) : (
+                <MenuIcon width={24} height={24} color="white" className="sm:w-7 sm:h-7 transition-transform duration-300" />
+              )}
+            </div>
           </button>
         </div>
       </header>

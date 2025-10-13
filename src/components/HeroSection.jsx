@@ -53,7 +53,7 @@ function HeroSection() {
                    lg:w-[350px] lg:h-[418px] lg:top-[30%] lg:right-[5%] lg:left-auto walking"
       />
 
-      <div className="absolute w-full rotate-[-1deg] bottom-0 z-10">
+      <div className="absolute w-full rotate-[-2deg] bottom-15 z-10">
         <Marquee className="bg-black/70 backdrop-blur-sm py-3 sm:py-4">
           {Array.from({ length: 30 }).map((_, index) => (
             <span

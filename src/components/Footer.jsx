@@ -22,7 +22,7 @@ const Footer = () => {
             <img
               src={image1}
               alt="Captain Mek Logo"
-              className="h-14 md:h-16 w-auto"
+              className="h-14 md:h-16 w-auto "
             />
           </div>
           {/* Navigation Links */}
@@ -63,11 +63,11 @@ const Footer = () => {
               FAQ
             </a>
           </nav>
-          
+
           <div className="flex gap-4">
             {/* Telegram */}
             <a
-              href="https://t.me/yourchannel" 
+              href="https://t.me/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FEE5A9] p-3 rounded-lg hover:bg-[#E5CE9F] transition-all duration-300 hover:scale-110"
@@ -78,7 +78,7 @@ const Footer = () => {
 
             {/* Twitter*/}
             <a
-              href="https://twitter.com/yourhandle"
+              href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#FEE5A9] p-3 rounded-lg hover:bg-[#E5CE9F] transition-all duration-300 hover:scale-110"
@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-gray-400 mt-10 px-4 text-[10px] sm:text-[11px] leading-relaxed tracking-wide uppercase max-w-4xl mx-auto">
+        <div className=" text-center text-gray-400 mt-10 px-4 text-[10px] sm:text-[11px] leading-relaxed tracking-wide uppercase max-w-4xl mx-auto">
           CAPTAINMEK IS A MEME-BASED PROJECT FOR ENTERTAINMENT. $MEK IS A
           UTILITY MEME COIN. NOTHING HERE IS FINANCIAL ADVICE. ALWAYS DYOR.
           CRYPTO IS A SPORT — SPEND AND TRADE WISELY.
