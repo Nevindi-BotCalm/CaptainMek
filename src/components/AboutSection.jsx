@@ -1,9 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import image8 from "../assets/image8.webp";
 import image9 from "../assets/image9.webp";
 import AboutSectionResponsive1 from "../assets/AboutSectionResponsive1.webp";
 import AboutSectionResponsive2 from "../assets/AboutSectionResponsive2.webp";
 
 function AboutSection() {
+  const { t } = useTranslation();
+  
   return (
     <div id="about" className="relative w-full">
       {/* Background Image */}
@@ -33,7 +36,7 @@ function AboutSection() {
   inline-block px-8 py-2 text-[48px] lg:text-[64px] mb-6 rotate-[-5deg] shadow-lg 
   relative left-1000 lg:left-[-600px] xl:left-[-600px] lg:ml-[200px]  "
           >
-            ABOUT
+            {t('about.title')}
           </div>
 
           <div
@@ -41,22 +44,15 @@ function AboutSection() {
                        rotate-[-6deg] lg:ml-15 mt-[-90px] md:mt-[-150px] md:ml-5 "
           >
             <p className="md:text-[10px] md:max-w-60 lg:text-[20px] lg:max-w-700 lg:mt-10 xl:text-[23px]" >
-              Captain Mek, the First Avenger of meme coins, wields $CMEK as a
-              powerful shield, leading the crypto community to turn chaos into
-              profit. More than just a meme, it combines internet culture and
-              blockchain technology to empower everyday investors.
+              {t('about.paragraph1')}
             </p>
             <br />
             <p className="md:text-[10px] md:max-w-60 md:mt-[-20px] lg:text-[20px] lg:max-w-700 xl:text-[23px] ">
-              The project is built on three key pillars: Mek’s Shield, an
-              AI-driven defense against scams and MEV; Mek’s Vault, a staking
-              fortress offering high APY; and Mek’s War Room, a precision meme
-              coin signal hub to help investors stay ahead.
+              {t('about.paragraph2')}
             </p>
             <br />
             <p className="md:text-[10px] md:max-w-60 md:mt-[-20px] lg:text-[20px] lg:max-w-700 xl:text-[23px]">
-              No villains, no drama — only heroes, loot, and glory. Grab your
-              $CMEK and join the revolution to conquer the memecoin universe!
+              {t('about.paragraph3')}
             </p>
           </div>
         </div>

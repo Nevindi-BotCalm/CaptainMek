@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import image1 from '../assets/image1.webp';
 import MenuIcon from './icons/MenuIcon';
 import UserSettingsIcon from './icons/UserSettingsIcon';
@@ -6,14 +7,15 @@ import LanguageSelector from './LanguageSelector';
 import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Ecosystem', href: '#ecosystem' },
-    { name: 'How To Buy', href: '#how-to-buy' },
-    { name: 'Battle Plan', href: '#battle-plan' },
-    { name: 'FAQ', href: '#faq' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.ecosystem'), href: '#ecosystem' },
+    { name: t('nav.howToBuy'), href: '#how-to-buy' },
+    { name: t('nav.battlePlan'), href: '#battle-plan' },
+    { name: t('nav.faq'), href: '#faq' },
   ];
 
   const handleSmoothScroll = (e, href) => {
@@ -60,7 +62,7 @@ const Navbar = () => {
           
           <button className="flex items-center gap-2 bg-[#FEE5A9] hover:bg-[#E5CE9F] text-black font-bold py-2 px-6 rounded-lg transition-all duration-300 hover:scale-105">
             <UserSettingsIcon width={20} height={20} color="black" />
-            <span>Log In</span>
+            <span>{t('nav.login')}</span>
           </button>
         </div>
 
@@ -68,7 +70,7 @@ const Navbar = () => {
         {/* Mobile Menu Buttons */}
         <div className="flex xl:hidden items-center gap-2 sm:gap-4">
           <button className="bg-[#FEE5A9] text-[#1E293B] font-bold py-2 px-3 sm:px-4 rounded-lg hover:bg-[#E5CE9F] transition-all duration-300 text-sm sm:text-base">
-            Log In
+            {t('nav.login')}
           </button>
           
           <button

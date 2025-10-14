@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import { useTranslation } from 'react-i18next';
 import image2 from "../assets/image2.webp";
 import image3 from "../assets/image3.webp";
 import image4 from "../assets/image4.webp";
@@ -7,6 +8,8 @@ import image6 from "../assets/image6.webp";
 import image7 from "../assets/image7.webp";
 
 function HeroSection() {
+  const { t } = useTranslation();
+  
   return (
     <div
       className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
@@ -65,7 +68,7 @@ function HeroSection() {
                 alt=""
                 className="inline w-4 h-4 sm:w-5 sm:h-5 mr-2"
               />
-              BECOME A MEME LEGEND BEFORE LIFTOFF!
+              {t('hero.marqueeText')}
             </span>
           ))}
         </Marquee>

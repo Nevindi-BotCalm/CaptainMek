@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import image1 from "../assets/image1.webp";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const handleSmoothScroll = (e, href) => {
     e.preventDefault();
     const element = document.querySelector(href);
@@ -14,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0F172A] py-12 md:py-16 border-t border-gray-800">
+    <footer className="bg-[#0F172A] py-12 md:py-16 border-t border-gray-800 xl:mt-[45px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-12">
           {/* Logo */}
@@ -32,35 +35,35 @@ const Footer = () => {
               onClick={(e) => handleSmoothScroll(e, "#about")}
               className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
             >
-              About
+              {t("nav.about")}
             </a>
             <a
               href="#ecosystem"
               onClick={(e) => handleSmoothScroll(e, "#ecosystem")}
               className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
             >
-              Ecosystem
+              {t("nav.ecosystem")}
             </a>
             <a
               href="#how-to-buy"
               onClick={(e) => handleSmoothScroll(e, "#how-to-buy")}
               className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
             >
-              How To Buy
+              {t("nav.howToBuy")}
             </a>
             <a
               href="#battle-plan"
               onClick={(e) => handleSmoothScroll(e, "#battle-plan")}
               className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
             >
-              Battle Plan
+              {t("nav.battlePlan")}
             </a>
             <a
               href="#faq"
               onClick={(e) => handleSmoothScroll(e, "#faq")}
               className="text-white hover:text-[#FEE5A9] transition-colors duration-300 text-base font-medium cursor-pointer"
             >
-              FAQ
+              {t("nav.faq")}
             </a>
           </nav>
 
@@ -91,9 +94,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className=" text-center text-gray-400 mt-10 px-4 text-[10px] sm:text-[11px] leading-relaxed tracking-wide uppercase max-w-4xl mx-auto">
-          CAPTAINMEK IS A MEME-BASED PROJECT FOR ENTERTAINMENT. $MEK IS A
-          UTILITY MEME COIN. NOTHING HERE IS FINANCIAL ADVICE. ALWAYS DYOR.
-          CRYPTO IS A SPORT — SPEND AND TRADE WISELY.
+          {t("footer.disclaimer")}
         </div>
       </div>
     </footer>

@@ -1,5 +1,4 @@
-
-
+import { useTranslation } from 'react-i18next';
 import a from "../assets/a.webp";
 import b from "../assets/b.webp";
 import c from "../assets/c.webp";
@@ -10,13 +9,14 @@ import g from "../assets/g.webp";
 import Marquee from "react-fast-marquee";
 
 function Customers() {
+  const { t } = useTranslation();
   const images = [a, b, c, d, e, f, g];
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-[#0F172A]">
       <div className="max-w-[1920px] mx-auto px-4">
         <h2 className="font-halo font-normal text-[32px] sm:text-[40px] md:text-[48px] lg:text-[54px] leading-tight text-center mb-10 md:mb-12 lg:mb-16">
-          Our Customers
+          {t('customers.title')}
         </h2>
 
         <Marquee

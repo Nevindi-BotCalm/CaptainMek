@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import battle from "../assets/Battle.webp";
 import vector1 from "../assets/Vector 1.webp";
 import vector2 from "../assets/Vector 2.webp";
@@ -9,16 +10,17 @@ import phace4 from "../assets/phace4.webp";
 import phace5 from "../assets/phace5.webp";
 
 function BattlePlan() {
+  const { t } = useTranslation();
   const [currentPhase, setCurrentPhase] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
 
   const phases = [
-    { text: "Phase 1: Unite the Legends", image: phace1 },
-    { text: "Phase 2: Rise of the Mek Crew", image: phace2 },
-    { text: "Phase 3: First Offensive", image: phace3 },
-    { text: "Phase 4: Mek’s War Command", image: phace4 },
-    { text: "Phase 5: Cosmic Domination", image: phace5 },
+    { text: t('battlePlan.phases.phase1'), image: phace1 },
+    { text: t('battlePlan.phases.phase2'), image: phace2 },
+    { text: t('battlePlan.phases.phase3'), image: phace3 },
+    { text: t('battlePlan.phases.phase4'), image: phace4 },
+    { text: t('battlePlan.phases.phase5'), image: phace5 },
   ];
 
   const nextPhase = () => setCurrentPhase((prev) => (prev + 1) % phases.length);
@@ -59,7 +61,7 @@ function BattlePlan() {
         >
           {/* Title */}
           <h2 className=" text-white font-halo text-[24px] sm:text-[28px] md:text-[36px] text-center tracking-wide mb-6 mt-[100px] ">
-            BATTLE PLAN
+            {t('battlePlan.title')}
           </h2>
 
           {/* Phase Image */}
@@ -114,7 +116,7 @@ function BattlePlan() {
             className="absolute text-white font-halo text-[36px] lg:text-[64px] xl:text-[74px] leading-tight
                        text-center top-[211px] left-[40%] -translate-x-1/2"
           >
-            BATTLE PLAN
+            {t('battlePlan.title')}
           </h2>
 
           {/* Left Vector */}
@@ -201,6 +203,3 @@ function BattlePlan() {
 }
 
 export default BattlePlan;
-
-
-

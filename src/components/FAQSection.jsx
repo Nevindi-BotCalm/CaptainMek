@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import FAQ1 from "../assets/FAQ1.webp";
 import FAQ2 from "../assets/FAQ2.webp";
 
 function FAQSection() {
+  const { t } = useTranslation();
   const [openCard, setOpenCard] = useState(null);
 
   const toggleCard = (index) => {
@@ -11,24 +13,20 @@ function FAQSection() {
 
   const questions = [
     {
-      question: "1. What is Captain Mek?",
-      answer:
-        "Captain Mek is a revolutionary token designed to bring innovation and excitement to the crypto ecosystem. It combines the power of meme culture with real-world utility, making it an essential token in the growing world of decentralized finance (DeFi). Captain Mek is built on a solid foundation of community-driven growth, strategic partnerships, and exciting features that provide real value for its holders.",
+      question: t('faq.questions.q1.question'),
+      answer: t('faq.questions.q1.answer'),
     },
     {
-      question: "2. What can I do with $CMEK?",
-      answer:
-        "$CMEK can be used for a variety of purposes within the Captain Mek ecosystem. You can hold it as a long-term investment, trade it on decentralized exchanges (DEX) and centralized exchanges (CEX), or use it to participate in community-driven events and token-driven incentives. Additionally, $CMEK holders will have access to exclusive rewards, contests, and governance opportunities within the Captain Mek platform.",
+      question: t('faq.questions.q2.question'),
+      answer: t('faq.questions.q2.answer'),
     },
     {
-      question: "3. What are the benefits of holding $CMEK long-term?",
-      answer:
-        "Holding $CMEK long-term offers multiple benefits. As the token grows in value and utility, long-term holders can enjoy capital appreciation. Additionally, $CMEK holders will gain early access to exclusive features, product releases, and events within the ecosystem. By holding $CMEK, you’ll also become an integral part of the community, helping to shape the future of the Captain Mek project through governance and voting opportunities.",
+      question: t('faq.questions.q3.question'),
+      answer: t('faq.questions.q3.answer'),
     },
     {
-      question: "4. What makes Captain Mek different?",
-      answer:
-        "What sets Captain Mek apart is its unique blend of meme culture, community-driven growth, and tangible utility within the DeFi space. While other tokens may focus solely on hype, Captain Mek is committed to providing real value to its holders. The project prioritizes strategic partnerships, innovative tokenomics, and an inclusive ecosystem that rewards users for being part of its growth. Captain Mek is more than just a meme token; it’s a movement that’s built to last.",
+      question: t('faq.questions.q4.question'),
+      answer: t('faq.questions.q4.answer'),
     },
   ];
 
@@ -50,7 +48,7 @@ function FAQSection() {
           leading-tight mb-8 sm:mb-12 md:mb-16 lg:mb-20
           text-center lg:text-left text-white w-full"
         >
-          FAQ
+          {t('faq.title')}
         </h2>
 
         {/* FAQ Cards */}

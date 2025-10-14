@@ -250,14 +250,7 @@
 }
 
 .absolute {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 8px;
-}
-
-.absolute:hover {
-  transform: translateY(-5px) scale(1.02);
-
-  z-index: 10;
 }
 
 @keyframes flyZoomGlow {
@@ -281,6 +274,47 @@
 .animate-flyZoomGlow {
   animation: flyZoomGlow 3s ease-in-out infinite alternate;
 }
+
+@keyframes flash {
+  0% { opacity: 1; transform: scale(1.4); filter: brightness(2); }
+  50% { opacity: 0.7; transform: scale(2); }
+  100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes recoil {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-5px) translateY(-2px) rotate(-1deg); }
+  30% { transform: translateX(2px) rotate(1deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes sparks {
+  0% { opacity: 1; transform: translate(0,0) scale(1); }
+  30% { transform: translate(12px,-8px) scale(0.8); opacity: 0.8; }
+  60% { transform: translate(-10px,-10px) scale(0.5); opacity: 0.5; }
+  100% { opacity: 0; transform: translate(0,-20px) scale(0); }
+}
+
+@keyframes realSmoke {
+  0% { opacity: 0.8; transform: translateY(0) scale(0.8); filter: blur(4px); }
+  50% { opacity: 0.4; transform: translateY(-25px) scale(1.2); }
+  100% { opacity: 0; transform: translateY(-60px) scale(1.5); }
+}
+
+.animate-flash {
+  animation: flash 0.3s ease-out infinite;
+}
+.animate-recoil {
+  animation: recoil 1s ease-in-out infinite;
+}
+.animate-sparks {
+  animation: sparks 0.6s ease-out infinite;
+}
+.animate-realSmoke {
+  animation: realSmoke 2s ease-out infinite;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -297,9 +331,7 @@ body {
     min-width: 380px;
 }
 
-@theme{
-  --breakpoint-3xl: 1920px;
-}
+
 
 .font-halo {
   font-family: 'Halo Dek', sans-serif;

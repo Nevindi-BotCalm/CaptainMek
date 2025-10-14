@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
 import "./App.css";
+import "./i18n";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Customers from "./components/Customers";
@@ -59,7 +60,6 @@ function App() {
 
   return (
     <div className="App relative min-h-screen text-white overflow-x-hidden bg-[#0F172A]">
-      {/* Background image */}
       <div
         className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
           bgLoaded ? "opacity-100" : "opacity-0"
@@ -70,7 +70,6 @@ function App() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" style={{ zIndex: 1 }}></div>
 
-      {/* Content */}
       <div className="relative z-10">
         <Navbar />
 
