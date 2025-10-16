@@ -1,0 +1,205 @@
+import { useState } from "react";
+import { useTranslation } from 'react-i18next';
+import battle from "../assets/Battle.webp";
+import vector1 from "../assets/Vector 1.webp";
+import vector2 from "../assets/Vector 2.webp";
+import phace1 from "../assets/phace1.webp";
+import phace2 from "../assets/phace2.webp";
+import phace3 from "../assets/phace3.webp";
+import phace4 from "../assets/phace4.webp";
+import phace5 from "../assets/phace5.webp";
+
+function BattlePlan() {
+  const { t } = useTranslation();
+  const [currentPhase, setCurrentPhase] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const phases = [
+    { text: t('battlePlan.phases.phase1'), image: phace1 },
+    { text: t('battlePlan.phases.phase2'), image: phace2 },
+    { text: t('battlePlan.phases.phase3'), image: phace3 },
+    { text: t('battlePlan.phases.phase4'), image: phace4 },
+    { text: t('battlePlan.phases.phase5'), image: phace5 },
+  ];
+
+  const nextPhase = () => setCurrentPhase((prev) => (prev + 1) % phases.length);
+  const prevPhase = () =>
+    setCurrentPhase((prev) => (prev - 1 + phases.length) % phases.length);
+
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) nextPhase();
+    if (isRightSwipe) prevPhase();
+  };
+
+  return (
+    <section
+      className="relative w-full max-w-[1920px] mx-auto bg-cover bg-center bg-no-repeat overflow-hidden px-4 py-10 min-h-[750px] sm:min-h-[850px] md:h-[450px] md:mt-[150px] xl:mt-[100px] xl:min-h-[1200px]"
+      style={{ backgroundImage: `url(${battle})` }}
+    >
+      <div className="relative w-full mx-auto min-h-[1200px] py-10 px-4">
+        {/*  Mobile + Tablet Layout */}
+        <div
+          className="flex flex-col items-center justify-center mt-6 md:flex xl:hidden"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Title */}
+          <h2 className=" text-white font-halo text-[24px] sm:text-[28px] md:text-[36px] text-center tracking-wide mb-6 mt-[100px] ">
+            {t('battlePlan.title')}
+          </h2>
+
+          {/* Phase Image */}
+          <img
+            src={phases[currentPhase].image}
+            alt={phases[currentPhase].text}
+            className="w-[200px] h-[220px] md:w-[260px] md:h-[280px] object-contain mb-6"
+          />
+
+          {/* Phase Text */}
+          <div
+            className="bg-[#FEE5A9] border border-gray-300 rounded-[20px] flex items-center justify-center font-medium px-6 py-4 w-[240px] md:w-[280px] shadow-lg"
+            style={{ boxShadow: "0 0 15px rgba(255, 255, 255, 0.4)" }}
+          >
+            <span className="bg-gradient-to-b from-[#330051] to-[#506EFF] bg-clip-text text-transparent text-[13px] sm:text-[14px] md:text-[16px] text-center font-semibold">
+              {phases[currentPhase].text}
+            </span>
+          </div>
+
+          {/* Dots */}
+          <div className="flex items-center justify-center space-x-2 mt-3">
+            {phases.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full ${
+                  index === currentPhase ? "bg-[#506EFF]" : "bg-gray-400"
+                }`}
+              ></div>
+            ))}
+          </div>
+
+          {/* Copy Button */}
+          <button
+            onClick={() =>
+              navigator.clipboard.writeText(
+                "0x71257312753EA7A2570a5a327bE4EA7A2570a5a32"
+              )
+            }
+            className="mt-6 w-full max-w-[349px] h-[66px] bg-[#1E1E4F] border-[4px] border-[#506EFF] text-white
+                       text-[11px] sm:text-[12px] md:text-[14px] rounded-[14px] font-bold flex items-center justify-center gap-2 hover:bg-[#2A2A6F] transition-colors duration-300"
+          >
+            0x71257312753EA7A2570a5a327bE4EA7A2570a5a32
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:hidden xl:flex">
+          <h2
+            className="absolute text-white font-halo text-[36px] lg:text-[64px] xl:text-[74px] leading-tight
+                       text-center top-[211px] left-[40%] -translate-x-1/2"
+          >
+            {t('battlePlan.title')}
+          </h2>
+
+          {/* Left Vector */}
+          <img
+            src={vector1}
+            alt="Vector 1"
+            className="absolute w-[72.94px] h-[87.75px] top-[648px] left-[117px] cursor-pointer"
+            onClick={prevPhase}
+          />
+
+          {/* Right Vector */}
+          <img
+            src={vector2}
+            alt="Vector 2"
+            className="absolute w-[72.94px] h-[87.75px] top-[648px] right-[117px] cursor-pointer"
+            onClick={nextPhase}
+          />
+
+          {/* Left Phase Card */}
+          <div
+            className="absolute w-[390px] h-[65px] top-[400px] left-[315px] bg-[#FEE5A9]
+                       border border-gray-300 rounded-[32px] flex items-center justify-center
+                       font-medium px-7 py-5"
+            style={{
+              filter: "blur(0.5px)",
+              boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
+            }}
+          >
+            <span className="bg-gradient-to-b from-[#330051] to-[#506EFF] bg-clip-text text-transparent">
+              {phases[currentPhase].text}
+            </span>
+          </div>
+
+          {/* Right Phase Cvard */}
+          <div
+            className="absolute w-[390px] h-[65px] top-[300px] right-[264px] bg-[#FEE5A9]
+                       border border-gray-300 rounded-[32px] flex items-center justify-center
+                       font-medium px-7
+                       
+                        py-5"
+            style={{
+              filter: "blur(0.5px)",
+              boxShadow: "0 0 10px rgba(255, 255, 255, 0.3)",
+            }}
+          >
+            <span className="bg-gradient-to-b from-[#330051] to-[#506EFF] bg-clip-text text-transparent">
+              {phases[(currentPhase + 1) % phases.length].text}
+            </span>
+          </div>
+
+          {/* Left Phase Image */}
+          <img
+            src={phases[currentPhase].image}
+            alt={`Phase ${currentPhase + 1}`}
+            className="absolute opacity-100 w-[417px] h-[449px] top-[590px] left-[261px]"
+          />
+
+          {/* Right Phase Image */}
+          <img
+            src={phases[(currentPhase + 1) % phases.length].image}
+            alt={`Phase ${((currentPhase + 1) % phases.length) + 1}`}
+            className="absolute opacity-100 w-[341px] h-[624px] top-[350px] right-[253px]"
+          />
+
+          {/* Desktop Copy Button */}
+          <button
+            onClick={() =>
+              navigator.clipboard.writeText(
+                "0x71257312753EA7A2570a5a327bE4EA7A2570a5a32"
+              )
+            }
+            className="absolute hidden md:flex w-[90%] max-w-[1079px] h-[96px] bottom-20 left-1/2 transform -translate-x-1/2 bg-[#1E1E4F] border-[8px] lg:border-[10px] border-[#506EFF] text-white
+                       text-[24px] lg:text-[32px] xl:text-[36px] rounded-[14px] font-bold leading-tight text-center items-center justify-center gap-3 px-8 hover:bg-[#2A2A6F] transition-colors duration-300"
+          >
+            0x71257312753EA7A2570a5a327bE4EA7A2570a5a32
+            <svg width="24" height="30" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default BattlePlan;
